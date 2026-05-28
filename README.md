@@ -10,6 +10,7 @@ Dokumentasi perjalanan belajar Blue Team & SOC Analyst — berisi writeup challe
 
 | Challenge | Platform | Category | Difficulty | Status | Date |
 |-----------|----------|----------|------------|--------|------|
+| [Piggy](./BTLO/Piggy/) | BTLO | PCAP Analysis | Medium | ✅ | 2026-05-29 |
 | [ThePackages](./BTLO/ThePackages/) | BTLO | Digital Forensics | Medium | ✅ | - |
 | [D3FEND](./BTLO/D3FEND/) | BTLO | Framework | Easy | ✅ | - |
 | [Macro-ni](./BTLO/Macro-ni/) | BTLO | Malware Analysis | Medium | ✅ | - |
@@ -30,6 +31,7 @@ Platform berbasis investigasi dan incident response. Setiap lab mensimulasikan i
 
 | Challenge | Category | Difficulty | Status |
 |-----------|----------|------------|--------|
+| [Piggy](./BTLO/Piggy/) | PCAP Analysis | Medium | ✅ |
 | [ThePackages](./BTLO/ThePackages/) | Digital Forensics | Medium | ✅ |
 | [D3FEND](./BTLO/D3FEND/) | Framework | Easy | ✅ |
 | [Macro-ni](./BTLO/Macro-ni/) | Malware Analysis | Medium | ✅ |
