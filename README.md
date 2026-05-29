@@ -23,7 +23,7 @@ Dokumentasi perjalanan belajar Blue Team & SOC Analyst — berisi writeup challe
 | [Curiosity](./BTLO/Curiosity/) | BTLO | Threat Hunting | Medium | ✅ | - |
 | [OskiLab](./CyberDefenders/OskiLab/) | CyberDefenders | Malware Analysis | Medium | ✅ | - |
 | [WebStrike](./CyberDefenders/WebStrike/) | CyberDefenders | Network Forensics | Easy | ✅ | 2026-05-29 |
-| [PoisonedCredentials](./CyberDefenders/PoisonedCredentials/) | CyberDefenders | Network Forensics | Easy | ✅ | - |
+| [PoisonedCredentials](./CyberDefenders/PoisonedCredentials/) | CyberDefenders | Network Forensics | Easy | ✅ | 2026-05-29 |
 | [Network Security Monitoring](./TryHackMe/SOC-Level-1/Network-Security-Monitoring/) | TryHackMe | Network Security | - | ✅ | - |
 | [Network Traffic Analysis](./TryHackMe/SOC-Level-1/Network-Traffic-Analysis/) | TryHackMe | Network Security | - | ✅ | - |
 
