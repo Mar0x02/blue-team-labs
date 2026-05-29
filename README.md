@@ -10,6 +10,7 @@ Dokumentasi perjalanan belajar Blue Team & SOC Analyst — berisi writeup challe
 
 | Challenge | Platform | Category | Difficulty | Status | Date |
 |-----------|----------|----------|------------|--------|------|
+| [Shiba Insider](./BTLO/Shiba%20Insider/) | BTLO | Digital Forensics / Steganography | Easy | 🔄 | 2026-05-29 |
 | [Piggy](./BTLO/Piggy/) | BTLO | PCAP Analysis | Medium | ✅ | 2026-05-29 |
 | [Bruteforce](./BTLO/Bruteforce/) | BTLO | Log Analysis | Easy | ✅ | 2026-05-29 |
 | [BEC-ky](./BTLO/BEC-ky/) | BTLO | Email Forensics / BEC | Easy | ✅ | 2026-05-29 |
@@ -42,6 +43,7 @@ Platform berbasis investigasi dan incident response. Setiap lab mensimulasikan i
 | [D3FEND](./BTLO/D3FEND/) | Framework | Easy | ✅ |
 | [Macro-ni](./BTLO/Macro-ni/) | Malware Analysis | Medium | ✅ |
 | [Curiosity](./BTLO/Curiosity/) | Threat Hunting | Medium | ✅ |
+| [Shiba Insider](./BTLO/Shiba%20Insider/) | Digital Forensics / Steganography | Easy | 🔄 |
 
 ### 🟣 [CyberDefenders](./CyberDefenders/)
 
