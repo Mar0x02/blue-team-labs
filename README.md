@@ -12,6 +12,7 @@ Dokumentasi perjalanan belajar Blue Team & SOC Analyst — berisi writeup challe
 |-----------|----------|----------|------------|--------|------|
 | [Piggy](./BTLO/Piggy/) | BTLO | PCAP Analysis | Medium | ✅ | 2026-05-29 |
 | [Bruteforce](./BTLO/Bruteforce/) | BTLO | Log Analysis | Easy | ✅ | 2026-05-29 |
+| [BEC-ky](./BTLO/BEC-ky/) | BTLO | Email Forensics / BEC | Easy | ✅ | 2026-05-29 |
 | [ThePackages](./BTLO/ThePackages/) | BTLO | Digital Forensics | Medium | ✅ | - |
 | [D3FEND](./BTLO/D3FEND/) | BTLO | Framework | Easy | ✅ | - |
 | [Macro-ni](./BTLO/Macro-ni/) | BTLO | Malware Analysis | Medium | ✅ | - |
@@ -34,6 +35,7 @@ Platform berbasis investigasi dan incident response. Setiap lab mensimulasikan i
 |-----------|----------|------------|--------|
 | [Piggy](./BTLO/Piggy/) | PCAP Analysis | Medium | ✅ |
 | [Bruteforce](./BTLO/Bruteforce/) | Log Analysis | Easy | ✅ |
+| [BEC-ky](./BTLO/BEC-ky/) | Email Forensics / BEC | Easy | ✅ |
 | [ThePackages](./BTLO/ThePackages/) | Digital Forensics | Medium | ✅ |
 | [D3FEND](./BTLO/D3FEND/) | Framework | Easy | ✅ |
 | [Macro-ni](./BTLO/Macro-ni/) | Malware Analysis | Medium | ✅ |

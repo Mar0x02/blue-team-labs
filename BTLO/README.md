@@ -10,3 +10,4 @@ Platform investigasi dan incident response. Setiap lab mensimulasikan insiden ny
 |-----------|----------|------------|--------|------|
 | [Piggy](./Piggy/) | PCAP Analysis | Medium | ✅ | 2026-05-29 |
 | [Bruteforce](./Bruteforce/) | Log Analysis | Easy | ✅ | 2026-05-29 |
+| [BEC-ky](./BEC-ky/) | Email Forensics / BEC | Easy | ✅ | 2026-05-29 |
