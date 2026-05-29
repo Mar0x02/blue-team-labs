@@ -21,7 +21,7 @@ Dokumentasi perjalanan belajar Blue Team & SOC Analyst — berisi writeup challe
 | [D3FEND](./BTLO/D3FEND/) | BTLO | Framework | Easy | ✅ | - |
 | [Macro-ni](./BTLO/Macro-ni/) | BTLO | Malware Analysis | Medium | ✅ | - |
 | [Curiosity](./BTLO/Curiosity/) | BTLO | Threat Hunting | Medium | ✅ | - |
-| [OskiLab](./CyberDefenders/OskiLab/) | CyberDefenders | Malware Analysis | Medium | ✅ | - |
+| [OskiLab](./CyberDefenders/OskiLab/) | CyberDefenders | Malware Analysis / Threat Intel | Medium | ✅ | 2026-05-29 |
 | [WebStrike](./CyberDefenders/WebStrike/) | CyberDefenders | Network Forensics | Easy | ✅ | 2026-05-29 |
 | [PoisonedCredentials](./CyberDefenders/PoisonedCredentials/) | CyberDefenders | Network Forensics | Easy | ✅ | 2026-05-29 |
 | [Network Security Monitoring](./TryHackMe/SOC-Level-1/Network-Security-Monitoring/) | TryHackMe | Network Security | - | ✅ | - |
@@ -55,7 +55,7 @@ Platform blue team dengan skenario forensik dan threat hunting berbasis PCAP, me
 
 | Challenge | Category | Difficulty | Status |
 |-----------|----------|------------|--------|
-| [OskiLab](./CyberDefenders/OskiLab/) | Malware Analysis | Medium | ✅ |
+| [OskiLab](./CyberDefenders/OskiLab/) | Malware Analysis / Threat Intel | Medium | ✅ |
 | [WebStrike](./CyberDefenders/WebStrike/) | Network Forensics | Easy | ✅ |
 | [PoisonedCredentials](./CyberDefenders/PoisonedCredentials/) | Network Forensics | Easy | ✅ |
 
