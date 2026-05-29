@@ -4,20 +4,13 @@
 > **Category:** Digital Forensics / Steganography  
 > **Difficulty:** Easy  
 > **Status:** ✅ Completed  
-> **Date:** 2026-05-29  
-> **Time Spent:** 🔄 Belum diisi  
+> **Date:** 2026-05-29
 
 ---
 
 ## 📌 Prolog
 
 Bisakah kamu mengungkap siapa insider-nya?
-
----
-
-## 🎯 Scenario
-
-> 🔄 *Belum diisi.*
 
 ---
 
