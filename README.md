@@ -10,6 +10,7 @@ Dokumentasi perjalanan belajar Blue Team & SOC Analyst — berisi writeup challe
 
 | Challenge | Platform | Category | Difficulty | Status | Date |
 |-----------|----------|----------|------------|--------|------|
+| [Log Analysis - Sysmon](./BTLO/Log%20Analysis%20-%20Sysmon/) | BTLO | Log Analysis / Threat Hunting | Medium | 🔄 | 2026-05-30 |
 | [Secrets](./BTLO/Secrets/) | BTLO | Cryptography / Web Security | Easy | ✅ | 2026-05-29 |
 | [Follina](./BTLO/Follina/) | BTLO | Malware Analysis | Medium | ✅ | 2026-05-29 |
 | [Shiba Insider](./BTLO/Shiba%20Insider/) | BTLO | Digital Forensics / Steganography | Easy | ✅ | 2026-05-29 |
@@ -48,6 +49,7 @@ Platform berbasis investigasi dan incident response. Setiap lab mensimulasikan i
 | [Secrets](./BTLO/Secrets/) | Cryptography / Web Security | Easy | ✅ |
 | [Follina](./BTLO/Follina/) | Malware Analysis | Medium | ✅ |
 | [Shiba Insider](./BTLO/Shiba%20Insider/) | Digital Forensics / Steganography | Easy | ✅ |
+| [Log Analysis - Sysmon](./BTLO/Log%20Analysis%20-%20Sysmon/) | Log Analysis / Threat Hunting | Medium | 🔄 |
 
 ### 🟣 [CyberDefenders](./CyberDefenders/)
 
