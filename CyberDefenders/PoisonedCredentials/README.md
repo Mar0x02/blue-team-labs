@@ -4,7 +4,7 @@
 > **Category:** Network Forensics  
 > **Difficulty:** Easy  
 > **Status:** ✅ Completed  
-> **Date:** 2026-05-29  
+> **Date:** 2026-05-16  
 > **Time Spent:** ~1 jam  
 
 ---

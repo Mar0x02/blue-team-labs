@@ -13,4 +13,4 @@ Platform blue team dengan skenario forensik dan threat hunting berbasis PCAP, me
 | [FakeGPT Lab](./FakeGPT%20Lab/) | Malware Analysis | Easy | ✅ | 2026-05-31 |
 | [OskiLab](./OskiLab/) | Malware Analysis / Threat Intel | Medium | ✅ | 2026-05-25 |
 | [WebStrike](./WebStrike/) | Network Forensics | Easy | ✅ | 2026-05-29 |
-| [PoisonedCredentials](./PoisonedCredentials/) | Network Forensics | Easy | ✅ | 2026-05-29 |
+| [PoisonedCredentials](./PoisonedCredentials/) | Network Forensics | Easy | ✅ | 2026-05-16 |
