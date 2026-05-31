@@ -50,7 +50,8 @@ Setelah extract file ZIP dari soal, ditemukan 6 file: beberapa file JavaScript, 
 
 Langkah pertama adalah membaca `manifest.json` untuk memahami konfigurasi extension: metadata seperti nama, versi, dan deskripsi. Yang langsung menarik perhatian adalah bagian `permissions` — extension ini meminta akses ke beberapa area yang cukup sensitif, salah satunya `cookies`. Setelah memahami struktur extension secara keseluruhan, analisis dilanjutkan ke file `app.js` dan `loader.js` sebagai file utama yang menjadi fokus pengerjaan soal.
 
-![](./assets/manifest.png)
+![](./assets/1.extract-file-zip.png)
+![](./assets/2.cek-file)
 
 ---
 
@@ -64,7 +65,7 @@ d3d3LmZhY2Vib29rLmNvbQ==
 
 String ini berfungsi sebagai kondisi penentu apakah payload exfiltration akan aktif — jika URL yang sedang dikunjungi user sesuai dengan hasil decode string ini, maka eksekusi berlanjut ke tahap selanjutnya. Encoding yang digunakan adalah **Base64**.
 
-![](./assets/soal-1/app_js_line9.png)
+![](./assets/soal-1/1.url-encrypt.png)
 
 **Jawaban:** `Base64`
 
@@ -80,7 +81,7 @@ d3d3LmZhY2Vib29rLmNvbQ== → www.facebook.com
 
 Extension secara spesifik menarget Facebook sebagai trigger lokasi exfiltration. Ketika user mengunjungi URL ini, seluruh mekanisme pencurian data aktif.
 
-![](./assets/soal-2/decoded_url.png)
+![](./assets/soal-2/1.encode-base64-url.png)
 
 **Jawaban:** `www.facebook.com`
 
@@ -90,7 +91,7 @@ Extension secara spesifik menarget Facebook sebagai trigger lokasi exfiltration.
 
 Teknik yang digunakan adalah **Pixel/Image-based Exfiltration** — data hasil exfiltration tidak dikirim via XHR atau fetch request biasa, melainkan disisipkan sebagai parameter di dalam URL `src` dari elemen `<img>`. Teknik ini lebih sulit dideteksi oleh network monitoring tool karena terlihat seperti request gambar biasa.
 
-![](./assets/soal-3/img_exfil.png)
+![](./assets/soal-3/1.tag-html-img.png)
 
 **Jawaban:** `img`
 
@@ -106,7 +107,7 @@ navigator.plugins.length === 0
 
 Browser dalam mode sandbox biasanya tidak memuat plugin apapun, sehingga nilai `navigator.plugins.length` akan bernilai `0`. Jika kondisi ini terpenuhi, extension menghentikan eksekusinya dan berperilaku normal — teknik klasik sandbox evasion.
 
-![](./assets/soal-4/sandbox_check.png)
+![](./assets/soal-4/1.browser-check.png)
 
 **Jawaban:** `navigator.plugins.length === 0`
 
@@ -116,7 +117,7 @@ Browser dalam mode sandbox biasanya tidak memuat plugin apapun, sehingga nilai `
 
 Credential harvesting dipicu oleh event `submit` — ketika user menekan tombol login/submit di halaman Facebook, extension menangkap input dari form tersebut sebelum data dikirim ke server.
 
-![](./assets/soal-5/submit_event.png)
+![](./assets/soal-5/1.event-listener-to-exfiltrate.png)
 
 **Jawaban:** `submit`
 
@@ -128,7 +129,7 @@ Selain credential harvesting via form submit, extension juga menjalankan keylogg
 
 Keylogger ini berfungsi sebagai fallback: jika exfiltration via form submit tidak berhasil, data keystroke tetap terekam dan di-exfiltrate secara terpisah ke C2.
 
-![](./assets/soal-6/keydown_event.png)
+![](./assets/soal-6/1.keylogger.png)
 
 **Jawaban:** `keydown`
 
@@ -138,7 +139,7 @@ Keylogger ini berfungsi sebagai fallback: jika exfiltration via form submit tida
 
 Domain C2 tempat seluruh data hasil exfiltration dikirimkan ditemukan langsung di dalam code.
 
-![](./assets/soal-7/c2_domain.png)
+![](./assets/soal-7/1.url-c2-exfiltration.png)
 
 **Jawaban:** `Mo.Elshaheedy.com`
 
@@ -152,7 +153,7 @@ Fungsi yang menangani seluruh proses credential exfiltration — dari pengambila
 exfiltrateCredentials(username, password)
 ```
 
-![](./assets/soal-8/exfiltrate_func.png)
+![](./assets/soal-8/1.prepare-credential-harvest.png)
 
 **Jawaban:** `exfiltrateCredentials`
 
@@ -166,7 +167,7 @@ Sebelum dikirim ke C2, data credential dienkripsi menggunakan **AES**. Key enkri
 SuperSecretKey123
 ```
 
-![](./assets/soal-9/aes_encrypt.png)
+![](./assets/soal-9/1.encrypt-data.png)
 
 **Jawaban:** `AES`
 
@@ -176,7 +177,7 @@ SuperSecretKey123
 
 Kembali ke `manifest.json` — dari 7 permission yang diminta extension ini, salah satunya adalah `cookies`. Ini mengindikasikan bahwa extension memiliki kemampuan untuk mengakses dan memanipulasi session cookie pengguna, yang bisa dimanfaatkan sebagai vektor exfiltration tambahan di luar credential harvesting.
 
-![](./assets/soal-10/manifest_permissions.png)
+![](./assets/soal-10/1.permission.png)
 
 **Jawaban:** `cookies`
 
