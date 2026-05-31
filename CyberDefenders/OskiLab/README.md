@@ -4,7 +4,7 @@
 > **Category:** Malware Analysis / Threat Intelligence  
 > **Difficulty:** Medium  
 > **Status:** ✅ Completed  
-> **Date:** 2026-05-29  
+> **Date:** 2026-05-25  
 > **Time Spent:** ~1.5 jam  
 
 ---
