@@ -13,4 +13,5 @@ Platform investigasi dan incident response. Setiap lab mensimulasikan insiden ny
 | [BEC-ky](./BEC-ky/) | Email Forensics / BEC | Easy | ✅ | 2026-05-29 |
 | [The-Report](./The-Report/) | Threat Intelligence | Easy | ✅ | 2026-05-29 |
 | [Shiba Insider](./Shiba%20Insider/) | Digital Forensics / Steganography | Easy | ✅ | 2026-05-29 |
+| [Malware Analysis - Ransomware Script](./Malware%20Analysis%20-%20Ransomware%20Script/) | Malware Analysis / Reverse Engineering | Medium | ✅ | 2026-05-06 |
 | [Log Analysis - Sysmon](./Log%20Analysis%20-%20Sysmon/) | Log Analysis / Threat Hunting | Medium | ✅ | 2026-05-30 |

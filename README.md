@@ -11,6 +11,7 @@ Dokumentasi perjalanan belajar Blue Team & SOC Analyst — berisi writeup challe
 | Challenge | Platform | Category | Difficulty | Status | Date |
 |-----------|----------|----------|------------|--------|------|
 | [Phishing Analysis](./BTLO/Phishing%20Analysis/) | BTLO | Email Forensics / Phishing Analysis | Easy | ✅ | 2026-05-31 |
+| [Malware Analysis - Ransomware Script](./BTLO/Malware%20Analysis%20-%20Ransomware%20Script/) | BTLO | Malware Analysis / Reverse Engineering | Medium | ✅ | 2026-05-06 |
 | [Log Analysis - Sysmon](./BTLO/Log%20Analysis%20-%20Sysmon/) | BTLO | Log Analysis / Threat Hunting | Medium | ✅ | 2026-05-30 |
 | [Secrets](./BTLO/Secrets/) | BTLO | Cryptography / Web Security | Easy | ✅ | 2026-05-29 |
 | [Follina](./BTLO/Follina/) | BTLO | Malware Analysis | Medium | ✅ | 2026-05-29 |
@@ -51,6 +52,7 @@ Platform berbasis investigasi dan incident response. Setiap lab mensimulasikan i
 | [Follina](./BTLO/Follina/) | Malware Analysis | Medium | ✅ |
 | [Shiba Insider](./BTLO/Shiba%20Insider/) | Digital Forensics / Steganography | Easy | ✅ |
 | [Phishing Analysis](./BTLO/Phishing%20Analysis/) | Email Forensics / Phishing Analysis | Easy | ✅ |
+| [Malware Analysis - Ransomware Script](./BTLO/Malware%20Analysis%20-%20Ransomware%20Script/) | Malware Analysis / Reverse Engineering | Medium | ✅ |
 | [Log Analysis - Sysmon](./BTLO/Log%20Analysis%20-%20Sysmon/) | Log Analysis / Threat Hunting | Medium | ✅ |
 
 ### 🟣 [CyberDefenders](./CyberDefenders/)
