@@ -2,6 +2,8 @@
 
 Platform investigasi dan incident response. Setiap lab mensimulasikan insiden nyata dengan artifact yang harus dianalisis.
 
+> **Profil:** [blueteamlabs.online/home/user/029871a90aa3a9832d73d8](https://blueteamlabs.online/home/user/029871a90aa3a9832d73d8)
+
 ---
 
 ## Challenge List
