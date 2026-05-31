@@ -2,8 +2,9 @@
 
 > **Platform:** CyberDefenders  
 > **Category:** Malware Analysis  
-> **Difficulty:** 🔄 Belum diisi  
+> **Difficulty:** Easy  
 > **Status:** 🔄 In Progress  
+> **Challenge Status:** Retired  
 > **Date:** 2026-05-31  
 > **Time Spent:** 🔄 Belum diisi  
 
