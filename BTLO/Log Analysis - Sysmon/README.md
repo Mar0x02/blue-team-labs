@@ -4,7 +4,7 @@
 > **Category:** Log Analysis / Threat Hunting  
 > **Difficulty:** Medium  
 > **Status:** ✅ Completed  
-> **Date:** 2026-05-31  
+> **Date:** 2026-05-30  
 > **Time Spent:** ~3 jam  
 
 ---
