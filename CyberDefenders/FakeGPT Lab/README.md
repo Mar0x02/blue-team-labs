@@ -12,7 +12,7 @@
 
 ## 📌 Prolog
 
-Analyze a malicious Chrome extension's code and behavior to identify data theft mechanisms, covert exfiltration via `<img>` tags, and anti-analysis techniques.
+Analisis code dan behavior dari Chrome extension berbahaya untuk mengidentifikasi mekanisme data theft, exfiltration tersembunyi via tag `<img>`, dan teknik anti-analysis.
 
 **Tactics:** Credential Access · Collection · Command and Control · Exfiltration  
 **Tools:** ExtAnalysis · CRX Viewer
