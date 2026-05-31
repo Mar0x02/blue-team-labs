@@ -2,7 +2,7 @@
 
 > **Platform:** CyberDefenders  
 > **Category:** Malware Analysis / Threat Intelligence  
-> **Difficulty:** Medium  
+> **Difficulty:** Easy  
 > **Status:** ✅ Completed  
 > **Date:** 2026-05-25  
 > **Time Spent:** ~1.5 jam  
