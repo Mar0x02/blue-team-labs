@@ -10,6 +10,7 @@ Dokumentasi perjalanan belajar Blue Team & SOC Analyst — berisi writeup challe
 
 | Challenge | Platform | Category | Difficulty | Status | Date |
 |-----------|----------|----------|------------|--------|------|
+| [ATT&CK](./BTLO/ATT&CK/) | BTLO | Threat Intelligence | Easy | ✅ | 2026-06-01 |
 | [Phishing Analysis](./BTLO/Phishing%20Analysis/) | BTLO | Email Forensics / Phishing Analysis | Easy | ✅ | 2026-05-31 |
 | [Phishing Analysis II](./BTLO/Phishing%20Analysis%20II/) | BTLO | Email Forensics / Phishing Analysis | Easy | ✅ | 2026-05-07 |
 | [Malware Analysis - Ransomware Script](./BTLO/Malware%20Analysis%20-%20Ransomware%20Script/) | BTLO | Malware Analysis / Reverse Engineering | Medium | ✅ | 2026-05-06 |
@@ -57,6 +58,7 @@ Platform berbasis investigasi dan incident response. Setiap lab mensimulasikan i
 | [Phishing Analysis II](./BTLO/Phishing%20Analysis%20II/) | Email Forensics / Phishing Analysis | Easy | ✅ |
 | [Malware Analysis - Ransomware Script](./BTLO/Malware%20Analysis%20-%20Ransomware%20Script/) | Malware Analysis / Reverse Engineering | Medium | ✅ |
 | [Log Analysis - Sysmon](./BTLO/Log%20Analysis%20-%20Sysmon/) | Log Analysis / Threat Hunting | Medium | ✅ |
+| [ATT&CK](./BTLO/ATT&CK/) | Threat Intelligence | Easy | ✅ |
 
 ### 🟣 [CyberDefenders](./CyberDefenders/)
 

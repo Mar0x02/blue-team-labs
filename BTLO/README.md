@@ -21,6 +21,7 @@ Platform investigasi dan incident response. Setiap lab mensimulasikan insiden ny
 | [Phishing Analysis II](./Phishing%20Analysis%20II/) | Email Forensics / Phishing Analysis | Easy | ✅ | 2026-05-07 |
 | [Malware Analysis - Ransomware Script](./Malware%20Analysis%20-%20Ransomware%20Script/) | Malware Analysis / Reverse Engineering | Medium | ✅ | 2026-05-06 |
 | [Log Analysis - Sysmon](./Log%20Analysis%20-%20Sysmon/) | Log Analysis / Threat Hunting | Medium | ✅ | 2026-05-30 |
+| [ATT&CK](./ATT&CK/) | Threat Intelligence | Easy | ✅ | 2026-06-01 |
 | [ThePackages](./ThePackages/) | Digital Forensics | Medium | ✅ | - |
 | [D3FEND](./D3FEND/) | Framework | Easy | ✅ | - |
 | [Macro-ni](./Macro-ni/) | Malware Analysis | Medium | ✅ | - |
