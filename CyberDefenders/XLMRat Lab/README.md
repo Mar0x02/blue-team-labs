@@ -38,9 +38,21 @@ Sebuah mesin telah ditandai karena adanya suspicious network traffic. Tugasmu ad
 
 ### 1. What is the URL from which the first malware stage was installed?
 
-Analisis dimulai dengan tshark untuk cek semua TCP stream yang ada di PCAP — ada 3 stream. Follow stream 0: terlihat victim `10.1.9.101` melakukan koneksi ke IP `45.126.209.4` port `222` dengan path `xlm.txt`. Di response-nya, content sudah di-obfuscate (**T1027.010**) — ini adalah first stage malware.
+Analisis dimulai dengan tshark untuk cek semua TCP stream yang ada di PCAP — ada 3 stream.
 
-![Stream 0 — koneksi victim ke C2 path xlm.txt](./assets/soal-1.png)
+![Cek semua stream yang tersedia](./assets/1.cek-stream-yang-ada.png)
+
+Follow stream 0: terlihat victim `10.1.9.101` melakukan koneksi ke IP `45.126.209.4` port `222` dengan path `xlm.txt`.
+
+![Follow stream 0 — koneksi victim ke C2](./assets/soal-1/1.follow-stream-0.png)
+
+Di response-nya ada PowerShell command tersembunyi:
+
+![PowerShell command di content stream](./assets/soal-1/2.cek-powershell-bash.png)
+
+Content `xlm.txt` di-obfuscate (**T1027.010**) — setelah di-decode terlihat perintah download `mdm.jpg` dari C2:
+
+![Metode obfuscation yang digunakan](./assets/soal-1/3.cek-obfuscate-method.png)
 
 **Jawaban:** `http://45.126.209.4:222/mdm.jpg`
 
@@ -48,9 +60,13 @@ Analisis dimulai dengan tshark untuk cek semua TCP stream yang ada di PCAP — a
 
 ### 2. Which hosting provider owns the associated IP address?
 
-Cek IP `45.126.209.4` di VirusTotal tab **Details** atau lewat ipinfo.io. Hosting provider yang tercatat di bawah IP tersebut adalah ReliableSite.
+Cek IP `45.126.209.4` di VirusTotal tab **Details**:
 
-![VirusTotal / ipinfo — hosting provider](./assets/soal-2.png)
+![VirusTotal — hosting provider](./assets/soal-2/1.cek-hosting-ip-provider-via-virustotal.png)
+
+Cross-check lewat ipinfo.io untuk konfirmasi:
+
+![ipinfo — hosting provider](./assets/soal-2/2.cek-ip-hosting-provider-via-ip-info.png)
 
 **Jawaban:** `ReliableSite.Net`
 
@@ -60,9 +76,11 @@ Cek IP `45.126.209.4` di VirusTotal tab **Details** atau lewat ipinfo.io. Hostin
 
 Follow stream 1 — response dari C2 saat download `mdm.jpg` berisi hexstring panjang, bukan binary image biasa. Extract semua file dari PCAP, hasilnya dua file: `xlm.txt` dan `mdm.jpg`.
 
-Sebelum lanjut, cek magic byte `mdm.jpg`:
+![Extract semua file HTTP dari PCAP](./assets/soal-3/1.extract-data-http.png)
 
-![Magic byte mdm.jpg — bukan file JPG biasa](./assets/soal-3.png)
+Sebelum lanjut, cek magic byte `mdm.jpg` untuk memastikan tipe file sebenarnya:
+
+![Magic byte mdm.jpg — bukan file JPG biasa](./assets/soal-3/2.cek-apakah-jpg-asli-atau-exe.png)
 
 Magic byte menunjukkan ini adalah Windows PE executable, bukan JPEG. Buat script Python sederhana untuk konversi hexstring ke file binary:
 
@@ -74,11 +92,13 @@ with open("mdm.bin", "wb") as f:
     f.write(bytes.fromhex(hex_data))
 ```
 
+Script Python untuk konversi:
+
+![Script Python konversi hexstring ke binary](./assets/soal-3/3.buat-extract-sederhana.png)
+
 Hasil binary di-hash SHA256:
 
-```
-sha256sum mdm.bin
-```
+![Hasil binary dan SHA256](./assets/soal-3/4.cek-hasil-dan-sha256.png)
 
 **Jawaban:** `1eb7b02e18f67420f42b1d94e74f3b6289d92672a0fb1786c30c03d68e81d798`
 
@@ -88,7 +108,7 @@ sha256sum mdm.bin
 
 Copy SHA256 dari soal 3, paste ke VirusTotal. Di tab **Detection**, cari baris **Alibaba**.
 
-![VirusTotal — Alibaba label](./assets/soal-4.png)
+![VirusTotal — Alibaba label](./assets/soal-4/1.cek-malware-based-on-alibaba.png)
 
 **Jawaban:** `AsyncRat`
 
@@ -98,7 +118,7 @@ Copy SHA256 dari soal 3, paste ke VirusTotal. Di tab **Detection**, cari baris *
 
 Masih di VirusTotal, buka tab **Details** lalu scroll ke section **History**. Cek field **Creation Time**.
 
-![VirusTotal Details — Creation Time](./assets/soal-5.png)
+![VirusTotal Details — Creation Time](./assets/soal-5/1.creation-time.png)
 
 **Jawaban:** `2023-10-30 15:08`
 
@@ -106,9 +126,17 @@ Masih di VirusTotal, buka tab **Details** lalu scroll ke section **History**. Ce
 
 ### 6. Which LOLBin is leveraged for stealthy process execution?
 
-Follow stream dari packet download `mdm.jpg`. Di bagian bawah hexstring, ada PowerShell script. Di dalam script tersebut terlihat path ke binary Microsoft .NET yang digunakan untuk menjalankan malware tanpa spawn proses mencurigakan.
+Follow stream dari packet download `mdm.jpg`. Content dipindahkan ke txt dulu agar lebih mudah dibaca:
 
-![Stream mdm.jpg — PowerShell script dengan RegSvcs](./assets/soal-6.png)
+![Content mdm.jpg dipindah ke txt](./assets/soal-6/1.move-to-txt.png)
+
+Hasil follow stream C2 path mdm.jpg — terlihat hexstring dan PowerShell script di bagian bawah:
+
+![Hasil follow stream C2 mdm.jpg](./assets/soal-6/2.ini-hasil-follow-stream-C2-mdm-file.png)
+
+Setelah content dibersihkan, terlihat path binary .NET yang digunakan:
+
+![Cleaning result — RegSvcs.exe teridentifikasi](./assets/soal-6/3.cleaning-res.png)
 
 `RegSvcs.exe` adalah signed binary Microsoft yang legitimate — dipakai sebagai LOLBin untuk bypass deteksi (**T1218.009**).
 
@@ -119,6 +147,8 @@ Follow stream dari packet download `mdm.jpg`. Di bagian bawah hexstring, ada Pow
 ### 7. List the names of the files dropped by the script.
 
 Dari analisis script di dalam `mdm.jpg`, ada tiga file yang secara eksplisit di-drop ke sistem korban, masing-masing punya peran berbeda dalam execution chain.
+
+![3 file yang di-drop ke sisi victim](./assets/soal-7/1.3-content-yang-disimpan-di-sisi-victim.png)
 
 **Jawaban:** `Conted.bat, Conted.ps1, Conted.vbs`
 
