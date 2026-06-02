@@ -27,7 +27,7 @@ Dokumentasi perjalanan belajar Blue Team & SOC Analyst — berisi writeup challe
 | [D3FEND](./BTLO/D3FEND/) | BTLO | Framework | Easy | ✅ | - |
 | [Macro-ni](./BTLO/Macro-ni/) | BTLO | Malware Analysis | Medium | ✅ | - |
 | [Curiosity](./BTLO/Curiosity/) | BTLO | Threat Hunting | Medium | ✅ | - |
-| [XLMRat Lab](./CyberDefenders/XLMRat%20Lab/) | CyberDefenders | Network Forensics / Malware Analysis | Medium | 🔄 | - |
+| [XLMRat Lab](./CyberDefenders/XLMRat%20Lab/) | CyberDefenders | Network Forensics / Malware Analysis | Medium | ✅ | 2026-06-03 |
 | [FakeGPT Lab](./CyberDefenders/FakeGPT%20Lab/) | CyberDefenders | Malware Analysis | Easy | ✅ | 2026-05-31 |
 | [OskiLab](./CyberDefenders/OskiLab/) | CyberDefenders | Malware Analysis / Threat Intel | Easy | ✅ | 2026-05-25 |
 | [WebStrike](./CyberDefenders/WebStrike/) | CyberDefenders | Network Forensics | Easy | ✅ | 2026-05-12 |
@@ -70,7 +70,7 @@ Platform blue team dengan skenario forensik dan threat hunting berbasis PCAP, me
 
 | Challenge | Category | Difficulty | Status |
 |-----------|----------|------------|--------|
-| [XLMRat Lab](./CyberDefenders/XLMRat%20Lab/) | Network Forensics / Malware Analysis | Medium | 🔄 |
+| [XLMRat Lab](./CyberDefenders/XLMRat%20Lab/) | Network Forensics / Malware Analysis | Medium | ✅ |
 | [OskiLab](./CyberDefenders/OskiLab/) | Malware Analysis / Threat Intel | Medium | ✅ |
 | [WebStrike](./CyberDefenders/WebStrike/) | Network Forensics | Easy | ✅ |
 | [PoisonedCredentials](./CyberDefenders/PoisonedCredentials/) | Network Forensics | Easy | ✅ |
