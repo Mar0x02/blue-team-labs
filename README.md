@@ -10,7 +10,7 @@ Dokumentasi perjalanan belajar Blue Team & SOC Analyst — berisi writeup challe
 
 | Challenge | Platform | Category | Difficulty | Status | Date |
 |-----------|----------|----------|------------|--------|------|
-| [EROS](./BTLO/EROS/) | BTLO | Incident Response | Easy | 🔄 | 2026-06-05 |
+| [EROS](./BTLO/EROS/) | BTLO | Incident Response | Easy | ✅ | 2026-06-07 |
 | [ATT&CK](./BTLO/ATT&CK/) | BTLO | Threat Intelligence | Easy | ✅ | 2026-06-01 |
 | [Injection Series Part 4](./BTLO/Injection%20Series%20Part%204/) | BTLO | Malware Analysis / Reverse Engineering | Medium | ✅ | 2026-05-07 |
 | [Phishing Analysis](./BTLO/Phishing%20Analysis/) | BTLO | Email Forensics / Phishing Analysis | Easy | ✅ | 2026-05-31 |
