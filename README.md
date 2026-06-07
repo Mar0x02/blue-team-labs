@@ -33,6 +33,7 @@ Dokumentasi perjalanan belajar Blue Team & SOC Analyst — berisi writeup challe
 | [OskiLab](./CyberDefenders/OskiLab/) | CyberDefenders | Malware Analysis / Threat Intel | Easy | ✅ | 2026-05-25 |
 | [WebStrike](./CyberDefenders/WebStrike/) | CyberDefenders | Network Forensics | Easy | ✅ | 2026-05-12 |
 | [PoisonedCredentials](./CyberDefenders/PoisonedCredentials/) | CyberDefenders | Network Forensics | Easy | ✅ | 2026-05-16 |
+| [Shadow Trace](./TryHackMe/Shadow-Trace/) | TryHackMe | Malware Analysis / Incident Response | Medium | 🔄 | 2026-06-07 |
 | [Network Security Monitoring](./TryHackMe/SOC-Level-1/Network-Security-Monitoring/) | TryHackMe | Network Security | - | ✅ | - |
 | [Network Traffic Analysis](./TryHackMe/SOC-Level-1/Network-Traffic-Analysis/) | TryHackMe | Network Security | - | ✅ | - |
 
@@ -83,6 +84,7 @@ Learning path structured — saat ini fokus di **SOC Level 1**.
 
 | Module | Category | Status |
 |--------|----------|--------|
+| [Shadow Trace](./TryHackMe/Shadow-Trace/) | Malware Analysis / Incident Response | 🔄 |
 | [Network Security Monitoring](./TryHackMe/SOC-Level-1/Network-Security-Monitoring/) | Network Security | ✅ |
 | [Network Traffic Analysis](./TryHackMe/SOC-Level-1/Network-Traffic-Analysis/) | Network Security | ✅ |
 
