@@ -33,6 +33,7 @@ Dokumentasi perjalanan belajar Blue Team & SOC Analyst — berisi writeup challe
 | [OskiLab](./CyberDefenders/OskiLab/) | CyberDefenders | Malware Analysis / Threat Intel | Easy | ✅ | 2026-05-25 |
 | [WebStrike](./CyberDefenders/WebStrike/) | CyberDefenders | Network Forensics | Easy | ✅ | 2026-05-12 |
 | [PoisonedCredentials](./CyberDefenders/PoisonedCredentials/) | CyberDefenders | Network Forensics | Easy | ✅ | 2026-05-16 |
+| [Learn Sigma](./LetsDefend/Learn-Sigma/) | LetsDefend | Threat Detection / Sigma Rules | Easy | 🔄 | 2026-06-08 |
 | [Shadow Trace](./TryHackMe/Shadow-Trace/) | TryHackMe | Malware Analysis / Incident Response | Medium | ✅ | 2026-06-08 |
 | [Network Security Monitoring](./TryHackMe/SOC-Level-1/Network-Security-Monitoring/) | TryHackMe | Network Security | - | ✅ | - |
 | [Network Traffic Analysis](./TryHackMe/SOC-Level-1/Network-Traffic-Analysis/) | TryHackMe | Network Security | - | ✅ | - |
@@ -77,6 +78,14 @@ Platform blue team dengan skenario forensik dan threat hunting berbasis PCAP, me
 | [OskiLab](./CyberDefenders/OskiLab/) | Malware Analysis / Threat Intel | Medium | ✅ |
 | [WebStrike](./CyberDefenders/WebStrike/) | Network Forensics | Easy | ✅ |
 | [PoisonedCredentials](./CyberDefenders/PoisonedCredentials/) | Network Forensics | Easy | ✅ |
+
+### 🟡 [LetsDefend](./LetsDefend/)
+
+Platform blue team berbasis hands-on SOC simulation — alert triage, log analysis, dan malware investigation.
+
+| Challenge | Category | Difficulty | Status |
+|-----------|----------|------------|--------|
+| [Learn Sigma](./LetsDefend/Learn-Sigma/) | Threat Detection / Sigma Rules | Easy | 🔄 |
 
 ### 🟢 [TryHackMe](./TryHackMe/)
 
