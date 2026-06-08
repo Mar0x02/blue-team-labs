@@ -84,7 +84,7 @@ Learning path structured — saat ini fokus di **SOC Level 1**.
 
 | Module | Category | Status |
 |--------|----------|--------|
-| [Shadow Trace](./TryHackMe/Shadow-Trace/) | Malware Analysis / Incident Response | 🔄 |
+| [Shadow Trace](./TryHackMe/Shadow-Trace/) | Malware Analysis / Incident Response | ✅ |
 | [Network Security Monitoring](./TryHackMe/SOC-Level-1/Network-Security-Monitoring/) | Network Security | ✅ |
 | [Network Traffic Analysis](./TryHackMe/SOC-Level-1/Network-Traffic-Analysis/) | Network Security | ✅ |
 
