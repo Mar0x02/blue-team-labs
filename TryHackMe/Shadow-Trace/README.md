@@ -3,7 +3,7 @@
 > **Platform:** TryHackMe  
 > **Category:** Malware Analysis / Incident Response  
 > **Difficulty:** Medium  
-> **Status:** 🔄 In Progress  
+> **Status:** ✅ Completed  
 > **Date:** 2026-06-07  
 > **Time Spent:** ~X jam  
 
@@ -39,8 +39,8 @@ Analisis binary yang ada di `C:\Users\DFIRUser\Desktop\windows-update.exe` di me
 
 | Lab | Deskripsi | Status |
 |-----|-----------|--------|
-| [File Analysis](./File-Analysis/) | Analisis static dan ekstraksi IOC dari binary `windows-update.exe` | 🔄 |
-| [Alert Analysis](./Alert-Analysis/) | Korelasi dan analisis EDR alerts dari proses `powershell.exe` dan `chrome.exe` | 🔄 |
+| [File Analysis](./File-Analysis/) | Analisis static dan ekstraksi IOC dari binary `windows-update.exe` | ✅ |
+| [Alert Analysis](./Alert-Analysis/) | Korelasi dan analisis EDR alerts dari proses `powershell.exe` dan `chrome.exe` | ✅ |
 
 ---
 

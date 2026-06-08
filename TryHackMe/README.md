@@ -10,4 +10,4 @@ Platform learning path berbasis gamifikasi untuk Blue Team dan SOC Analyst.
 
 | Challenge | Category | Difficulty | Status | Date |
 |-----------|----------|------------|--------|------|
-| [Shadow Trace](./Shadow-Trace/) | Malware Analysis / Incident Response | Medium | 🔄 | 2026-06-07 |
+| [Shadow Trace](./Shadow-Trace/) | Malware Analysis / Incident Response | Medium | ✅ | 2026-06-08 |
