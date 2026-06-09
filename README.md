@@ -75,8 +75,10 @@ Platform blue team dengan skenario forensik dan threat hunting berbasis PCAP, me
 
 | Challenge | Category | Difficulty | Status |
 |-----------|----------|------------|--------|
+| [Tusk Infostealer Lab](./CyberDefenders/Tusk%20Infostealer%20Lab/) | Threat Intelligence | Easy | ✅ |
 | [XLMRat Lab](./CyberDefenders/XLMRat%20Lab/) | Network Forensics / Malware Analysis | Medium | ✅ |
-| [OskiLab](./CyberDefenders/OskiLab/) | Malware Analysis / Threat Intel | Medium | ✅ |
+| [FakeGPT Lab](./CyberDefenders/FakeGPT%20Lab/) | Malware Analysis | Easy | ✅ |
+| [OskiLab](./CyberDefenders/OskiLab/) | Malware Analysis / Threat Intel | Easy | ✅ |
 | [WebStrike](./CyberDefenders/WebStrike/) | Network Forensics | Easy | ✅ |
 | [PoisonedCredentials](./CyberDefenders/PoisonedCredentials/) | Network Forensics | Easy | ✅ |
 
