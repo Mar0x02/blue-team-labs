@@ -10,4 +10,4 @@ Platform blue team berbasis hands-on SOC simulation — mulai dari alert triage,
 
 | Challenge | Category | Difficulty | Status | Date |
 |-----------|----------|------------|--------|------|
-| [Learn Sigma](./Learn-Sigma/) | Threat Detection / Sigma Rules | Easy | ✅ | 2026-06-09 |
+| [Learn Sigma](./Learn-Sigma/) | Threat Detection / Sigma Rules | Beginner | ✅ | 2026-06-09 |

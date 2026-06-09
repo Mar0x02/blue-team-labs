@@ -2,7 +2,7 @@
 
 > **Platform:** LetsDefend  
 > **Category:** Threat Detection / Sigma Rules  
-> **Difficulty:** Easy  
+> **Difficulty:** Beginner  
 > **Status:** ✅ Completed  
 > **Date:** 2026-06-09  
 > **Time Spent:** ~X jam  
