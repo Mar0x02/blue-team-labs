@@ -28,6 +28,7 @@ Dokumentasi perjalanan belajar Blue Team & SOC Analyst — berisi writeup challe
 | [D3FEND](./BTLO/D3FEND/) | BTLO | Framework | Easy | ✅ | - |
 | [Macro-ni](./BTLO/Macro-ni/) | BTLO | Malware Analysis | Medium | ✅ | - |
 | [Curiosity](./BTLO/Curiosity/) | BTLO | Threat Hunting | Medium | ✅ | - |
+| [Tusk Infostealer Lab](./CyberDefenders/Tusk%20Infostealer%20Lab/) | CyberDefenders | Threat Intelligence | Easy | ✅ | 2026-06-09 |
 | [XLMRat Lab](./CyberDefenders/XLMRat%20Lab/) | CyberDefenders | Network Forensics / Malware Analysis | Medium | ✅ | 2026-06-03 |
 | [FakeGPT Lab](./CyberDefenders/FakeGPT%20Lab/) | CyberDefenders | Malware Analysis | Easy | ✅ | 2026-05-31 |
 | [OskiLab](./CyberDefenders/OskiLab/) | CyberDefenders | Malware Analysis / Threat Intel | Easy | ✅ | 2026-05-25 |
