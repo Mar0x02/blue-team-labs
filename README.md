@@ -66,7 +66,7 @@ Platform berbasis investigasi dan incident response. Setiap lab mensimulasikan i
 | [Log Analysis - Sysmon](./BTLO/Log%20Analysis%20-%20Sysmon/) | Log Analysis / Threat Hunting | Medium | ✅ |
 | [ATT&CK](./BTLO/ATT&CK/) | Threat Intelligence | Easy | ✅ |
 | [Injection Series Part 4](./BTLO/Injection%20Series%20Part%204/) | Malware Analysis / Reverse Engineering | Medium | ✅ |
-| [EROS](./BTLO/EROS/) | Incident Response | Easy | 🔄 |
+| [EROS](./BTLO/EROS/) | Incident Response | Easy | ✅ |
 | [ThePackages](./BTLO/ThePackages/) | OSINT / Google Dorking | Easy | 🔄 |
 
 ### 🟣 [CyberDefenders](./CyberDefenders/)
