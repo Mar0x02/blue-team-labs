@@ -25,7 +25,7 @@ Dokumentasi perjalanan belajar Blue Team & SOC Analyst — berisi writeup challe
 | [BEC-ky](./BTLO/BEC-ky/) | BTLO | Email Forensics / BEC | Easy | ✅ | 2026-05-29 |
 | [The Report](./BTLO/The-Report/) | BTLO | Threat Intelligence | Easy | ✅ | 2026-05-29 |
 | [ThePackages](./BTLO/ThePackages/) | BTLO | OSINT / Google Dorking | Easy | 🔄 | - |
-| [D3FEND](./BTLO/D3FEND/) | BTLO | Framework | Easy | ✅ | - |
+| [D3FEND](./BTLO/D3FEND/) | BTLO | Framework | Easy | ✅ | 2026-05-09 |
 | [Macro-ni](./BTLO/Macro-ni/) | BTLO | Malware Analysis | Medium | ✅ | - |
 | [Curiosity](./BTLO/Curiosity/) | BTLO | Threat Hunting | Medium | ✅ | - |
 | [Tusk Infostealer Lab](./CyberDefenders/Tusk%20Infostealer%20Lab/) | CyberDefenders | Threat Intelligence | Easy | ✅ | 2026-06-09 |
