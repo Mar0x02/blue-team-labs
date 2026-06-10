@@ -10,7 +10,7 @@ Platform blue team dengan skenario forensik dan threat hunting berbasis PCAP, me
 
 | Challenge | Category | Difficulty | Status | Date |
 |-----------|----------|------------|--------|------|
-| [DanaBot](./DanaBot/) | Network Forensics | Medium | 🔄 | 2026-06-10 |
+| [DanaBot](./DanaBot/) | Network Forensics | Medium | ✅ | 2026-06-10 |
 | [Tusk Infostealer Lab](./Tusk%20Infostealer%20Lab/) | Threat Intelligence | Easy | ✅ | 2026-06-09 |
 | [XLMRat Lab](./XLMRat%20Lab/) | Network Forensics / Malware Analysis | Medium | ✅ | 2026-06-03 |
 | [FakeGPT Lab](./FakeGPT%20Lab/) | Malware Analysis | Easy | ✅ | 2026-05-31 |
