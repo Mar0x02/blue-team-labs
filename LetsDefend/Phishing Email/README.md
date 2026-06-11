@@ -2,7 +2,7 @@
 
 > **Platform:** LetsDefend  
 > **Category:** Email Forensics / Phishing Analysis  
-> **Difficulty:** Easy  
+> **Difficulty:** Beginner  
 > **Status:** ✅ Completed  
 > **Date:** 2026-06-11  
 > **Time Spent:** ~X jam  
