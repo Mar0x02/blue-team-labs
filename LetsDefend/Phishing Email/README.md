@@ -89,8 +89,8 @@ Kombinasi spoofed sender, subject mencurigakan, dan link ke HTML masqueraded sud
 | Tactic | Technique | ID | Keterangan |
 |--------|-----------|----|------------|
 | Initial Access | Phishing: Spearphishing Link | T1566.002 | Link ke storage.googleapis.com yang meng-host HTML phishing |
-| Defense Evasion | Social Engineering: Impersonation | T1684.001 | Email mengimpersonasi PayPal |
-| Defense Evasion | Social Engineering: Email Spoofing | T1684.002 | Sender address di-spoof |
+| Stealth | Social Engineering: Impersonation | T1684.001 | Email mengimpersonasi PayPal |
+| Stealth | Social Engineering: Email Spoofing | T1684.002 | Sender address di-spoof |
 
 ---
 
