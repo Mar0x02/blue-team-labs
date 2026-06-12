@@ -12,3 +12,4 @@ Platform blue team berbasis hands-on SOC simulation — mulai dari alert triage,
 |-----------|----------|------------|--------|------|
 | [Learn Sigma](./Learn-Sigma/) | Threat Detection / Sigma Rules | Beginner | ✅ | 2026-06-09 |
 | [Phishing Email](./Phishing%20Email/) | Email Forensics / Phishing Analysis | Beginner | ✅ | 2026-06-11 |
+| [PCAP Analysis](./PCAP%20Analysis/) | Network Forensics / PCAP Analysis | Beginner | 🔄 | - |
