@@ -37,6 +37,8 @@ Dokumentasi perjalanan belajar Blue Team & SOC Analyst — berisi writeup challe
 | [PoisonedCredentials](./CyberDefenders/PoisonedCredentials/) | CyberDefenders | Network Forensics | Easy | ✅ | 2026-05-16 |
 | [Learn Sigma](./LetsDefend/Learn-Sigma/) | LetsDefend | Threat Detection / Sigma Rules | Beginner | ✅ | 2026-06-09 |
 | [Phishing Email](./LetsDefend/Phishing%20Email/) | LetsDefend | Email Forensics / Phishing Analysis | Beginner | ✅ | 2026-06-11 |
+| [PCAP Analysis](./LetsDefend/PCAP%20Analysis/) | LetsDefend | Network Forensics / PCAP Analysis | Beginner | 🔄 | - |
+| [Invite Only](./TryHackMe/Invite%20Only/) | TryHackMe | Threat Intelligence | Medium | 🔄 | 2026-06-12 |
 | [Shadow Trace](./TryHackMe/Shadow-Trace/) | TryHackMe | Malware Analysis / Incident Response | Medium | ✅ | 2026-06-08 |
 | [Network Security Monitoring](./TryHackMe/SOC-Level-1/Network-Security-Monitoring/) | TryHackMe | Network Security | - | ✅ | - |
 | [Network Traffic Analysis](./TryHackMe/SOC-Level-1/Network-Traffic-Analysis/) | TryHackMe | Network Security | - | ✅ | - |
@@ -93,6 +95,7 @@ Platform blue team berbasis hands-on SOC simulation — alert triage, log analys
 |-----------|----------|------------|--------|
 | [Learn Sigma](./LetsDefend/Learn-Sigma/) | Threat Detection / Sigma Rules | Easy | ✅ |
 | [Phishing Email](./LetsDefend/Phishing%20Email/) | Email Forensics / Phishing Analysis | Beginner | ✅ |
+| [PCAP Analysis](./LetsDefend/PCAP%20Analysis/) | Network Forensics / PCAP Analysis | Beginner | 🔄 |
 
 ### 🟢 [TryHackMe](./TryHackMe/)
 
