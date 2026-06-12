@@ -38,7 +38,7 @@ Dokumentasi perjalanan belajar Blue Team & SOC Analyst — berisi writeup challe
 | [Learn Sigma](./LetsDefend/Learn-Sigma/) | LetsDefend | Threat Detection / Sigma Rules | Beginner | ✅ | 2026-06-09 |
 | [Phishing Email](./LetsDefend/Phishing%20Email/) | LetsDefend | Email Forensics / Phishing Analysis | Beginner | ✅ | 2026-06-11 |
 | [PCAP Analysis](./LetsDefend/PCAP%20Analysis/) | LetsDefend | Network Forensics / PCAP Analysis | Beginner | 🔄 | - |
-| [Invite Only](./TryHackMe/Invite%20Only/) | TryHackMe | Threat Intelligence | Medium | 🔄 | 2026-06-12 |
+| [Invite Only](./TryHackMe/Invite%20Only/) | TryHackMe | Threat Intelligence | Medium | ✅ | 2026-06-12 |
 | [Shadow Trace](./TryHackMe/Shadow-Trace/) | TryHackMe | Malware Analysis / Incident Response | Medium | ✅ | 2026-06-08 |
 | [Network Security Monitoring](./TryHackMe/SOC-Level-1/Network-Security-Monitoring/) | TryHackMe | Network Security | - | ✅ | - |
 | [Network Traffic Analysis](./TryHackMe/SOC-Level-1/Network-Traffic-Analysis/) | TryHackMe | Network Security | - | ✅ | - |
