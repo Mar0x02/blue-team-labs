@@ -12,4 +12,4 @@ Platform learning path berbasis gamifikasi untuk Blue Team dan SOC Analyst.
 |-----------|----------|------------|--------|------|
 | [Shadow Trace](./Shadow-Trace/) | Malware Analysis / Incident Response | Medium | ✅ | 2026-06-08 |
 | [Invite Only](./Invite%20Only/) | Threat Intelligence | Medium | ✅ | 2026-06-12 |
-| [ItsyBisy](./ItsyBisy/) | Network Analysis / SIEM / Log Analysis | Medium | 🔄 | 2026-06-15 |
+| [ItsyBisy](./ItsyBisy/) | Network Analysis / SIEM / Log Analysis | Medium | ✅ | 2026-06-15 |
