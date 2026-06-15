@@ -2,7 +2,7 @@
 
 > **Platform:** TryHackMe  
 > **Category:** Network Analysis / SIEM / Log Analysis  
-> **Difficulty:** Easy  
+> **Difficulty:** Medium  
 > **Status:** 🔄 In Progress  
 > **Date:** 2026-06-15  
 > **Time Spent:** ~X jam  
