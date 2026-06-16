@@ -3,7 +3,7 @@
 > **Platform:** TryHackMe  
 > **Category:** SIEM / Log Analysis / Threat Hunting  
 > **Difficulty:** Medium  
-> **Status:** 🔄 In Progress  
+> **Status:** ✅ Completed  
 > **Date:** 2026-06-16  
 > **Time Spent:** ~X jam  
 
@@ -48,44 +48,127 @@ Jaringan klien terbagi dalam tiga segmen:
 
 ## 🔍 Answer & Walkthrough
 
-> 🔄 *Belum diisi — akan dilengkapi setelah pengerjaan selesai.*
+### 1. How many logs are ingested from the month of March, 2022?
+
+Set time range di Splunk ke **March 1–31, 2022** dengan index `win_eventlogs`. Total hit langsung terbaca dari hasil pencarian.
+
+![Filter Data Bulan Maret 2022](./assets/1.date-range.png)
+
+**Jawaban:** `13959`
+
+---
+
+### 2. Imposter Alert — siapa nama user tersebut?
+
+Dari semua username yang muncul di log, ada satu nama yang janggal: `Amel1a` — huruf `l` diganti angka `1`, menyerupai username asli `Amelia` dari departemen Marketing. Teknik klasik typosquatting untuk membuat akun palsu yang sulit dideteksi sekilas.
+
+![Deteksi Username Impostor](./assets/2.cek-username-impostor.png)
+
+**Jawaban:** `Amel1a`
+
+---
+
+### 3. User HR yang menjalankan scheduled task?
+
+Filter log dengan keyword `schtasks` atau `Task Scheduler`, lalu lihat kolom user. Ditemukan `Chris.fort` dari departemen HR menjalankan scheduled task — dan yang bikin red flag, task tersebut berlokasi di folder `AppData\Local\Temp`, direktori yang tidak seharusnya jadi tempat task legitimate.
+
+![Scheduled Task dari AppData Temp](./assets/3.schedule-task-running.png)
+
+**Jawaban:** `Chris.fort`
+
+---
+
+### 4–6. User HR yang pakai LoLBin, binary apa, dan kapan dieksekusi?
+
+Filter log dengan keyword `certutil` — langsung ketemu. User `haroon` dari HR menjalankan `certutil.exe` untuk mendownload payload dari internet. `certutil` adalah Windows binary legitimate yang sering disalahgunakan sebagai LoLBin karena bisa decode dan download file tanpa trigger antivirus. Eksekusi tercatat pada **4 Maret 2022**.
+
+![Eksekusi certutil oleh haroon](./assets/4.LoLBin.png)
+
+**Jawaban:**
+- User: `haroon`
+- Binary (LoLBin): `certutil.exe`
+- Tanggal eksekusi: `2022-03-04`
+
+---
+
+### 7–10. C2 site, nama file, flag, dan URL lengkap
+
+Dari log eksekusi `certutil` di atas, terlihat koneksi ke **controlc.com** — sebuah platform berbagi teks online, mirip Pastebin. Path yang diakses adalah `/e4d11035`.
+
+Untuk memverifikasi konten URL tersebut, digunakan dua pendekatan:
+- **Url2Png** — untuk screenshot tampilan halaman tanpa harus membuka langsung
+- **wheregoes.com** — link checker untuk menelusuri redirect dan konten akhir dari URL
+
+Dari sana ditemukan file bernama `benign.exe` yang tersimpan ke host, beserta flag tersembunyi di dalam kontennya.
+
+![Investigasi C2 - Tampilan Halaman](./assets/5.cek-C2-1.png)
+
+![Investigasi C2 - Konten & Flag](./assets/5.cek-C2-2.png)
+
+**Jawaban:**
+- Third-party site: `controlc.com`
+- Nama file: `benign.exe`
+- Flag: `THM{KJ&*H^B0}`
+- Full URL: `https://controlc.com/e4d11035`
 
 ---
 
 ## 🚨 Key Findings / IOCs
 
-> 🔄 *Belum diisi.*
-
 | Tipe | Value | Keterangan |
 |------|-------|------------|
-| IP Address | `...` | ... |
-| File Hash | `...` | ... |
-| Domain | `...` | ... |
+| Username | `Amel1a` | Akun impostor — typosquatting dari `Amelia` |
+| Username | `haroon` | User HR yang mengeksekusi LoLBin |
+| Username | `Chris.fort` | User HR dengan scheduled task mencurigakan |
+| Binary | `certutil.exe` | LoLBin yang dipakai untuk download payload dari C2 |
+| Domain | `controlc.com` | C2 server — platform text-sharing yang disalahgunakan |
+| URL | `https://controlc.com/e4d11035` | URL C2 lengkap |
+| File | `benign.exe` | Payload yang di-drop ke host dari C2 |
+| Path | `AppData\Local\Temp` | Lokasi drop payload dan scheduled task |
 
 ---
 
 ## 🗺️ MITRE ATT&CK Mapping
 
-> 🔄 *Belum diisi.*
-
 | Tactic | Technique | ID | Keterangan |
 |--------|-----------|----|------------|
-| ... | ... | ... | ... |
+| Persistence | Create Account: Local Account | T1136.001 | Pembuatan akun impostor `Amel1a` via typosquatting |
+| Defense Evasion / Command & Control | Ingress Tool Transfer | T1105 | `certutil.exe` dipakai untuk download `benign.exe` dari `controlc.com` |
+| Execution | Scheduled Task/Job: Scheduled Task | T1053.005 | `Chris.fort` menjalankan scheduled task dari `AppData\Local\Temp` |
 
 ---
 
 ## 📋 Summary — Attacker Behavior & Todo
 
-> 🔄 *Belum diisi — akan dilengkapi setelah analisis selesai.*
+### Attacker Behavior
+
+Lab ini hanya menyediakan Event ID 4688 (process creation), sehingga rekonstruksi full kill chain tidak bisa dilakukan — tidak ada artifact jaringan, memory, atau endpoint lain. Namun dari log yang ada, pola serangan bisa ditelusuri secara kronologis:
+
+**4 Maret 2022** — User `haroon` mengeksekusi `certutil.exe` untuk mendownload payload dari `https://controlc.com/e4d11035`. `certutil` dipilih karena merupakan Windows binary bawaan yang jarang di-flag oleh antivirus — teknik klasik *Living off the Land Binary (LoLBin)*. Payload yang diunduh adalah `benign.exe`, sebuah nama yang sengaja dibuat terlihat tidak berbahaya. File ini di-drop ke direktori `AppData\Local\Temp` milik `Chris.fort` — bukan folder milik `haroon` sendiri, yang mengindikasikan adanya aksi lateral atau pre-staged access.
+
+**6 Maret 2022** — `Chris.fort` menjalankan scheduled task yang berlokasi di `AppData\Local\Temp`, folder yang sama tempat `benign.exe` di-drop dua hari sebelumnya. Ini red flag yang kuat: task legitimate tidak seharusnya di-store di Temp.
+
+Sepanjang periode ini juga muncul akun `Amel1a` — typosquatting dari nama asli `Amelia` di departemen Marketing. Kemungkinan dibuat untuk persistence atau lateral movement dengan menyamar sebagai user yang legitimate.
+
+Korelasi yang paling mungkin: `haroon` adalah titik kompromi awal, `Chris.fort` adalah target pivot, dan `Amel1a` adalah persistence mechanism yang disiapkan.
+
+### Todo / Follow-up
+
+- [ ] Pelajari lebih dalam teknik LoLBin lainnya selain `certutil` — referensi: [LOLBAS Project](https://lolbas-project.github.io/)
+- [ ] Eksplorasi deteksi scheduled task dari direktori non-standard (`AppData`, `Temp`) menggunakan Splunk
+- [ ] Pelajari cara threat actors menyalahgunakan platform legitimate (controlc, pastebin, discord) sebagai C2 — teknik *Living off Trusted Sites (LoTS)*
+- [ ] Latihan korelasi antar event di Splunk: gabungkan Event ID 4688 (process creation) dengan 4624/4625 (logon) untuk bangun timeline lebih lengkap
 
 ---
 
 ## 📚 References
 
-- [MITRE ATT&CK — T1059: Command and Scripting Interpreter](https://attack.mitre.org/techniques/T1059/)
-- [MITRE ATT&CK — T1053: Scheduled Task/Job](https://attack.mitre.org/techniques/T1053/)
-- [Splunk Documentation](https://docs.splunk.com/)
+- [MITRE ATT&CK — T1136.001: Create Account: Local Account](https://attack.mitre.org/techniques/T1136/001/)
+- [MITRE ATT&CK — T1105: Ingress Tool Transfer](https://attack.mitre.org/techniques/T1105/)
+- [MITRE ATT&CK — T1053.005: Scheduled Task](https://attack.mitre.org/techniques/T1053/005/)
+- [LOLBAS Project — certutil](https://lolbas-project.github.io/lolbas/Binaries/Certutil/)
 - [Windows Event ID 4688 — Process Creation](https://learn.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4688)
+- [Living off Trusted Sites (LoTS)](https://lots-project.com/)
 
 ---
 
