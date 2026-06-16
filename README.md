@@ -38,6 +38,7 @@ Dokumentasi perjalanan belajar Blue Team & SOC Analyst — berisi writeup challe
 | [Learn Sigma](./LetsDefend/Learn-Sigma/) | LetsDefend | Threat Detection / Sigma Rules | Beginner | ✅ | 2026-06-09 |
 | [Phishing Email](./LetsDefend/Phishing%20Email/) | LetsDefend | Email Forensics / Phishing Analysis | Beginner | ✅ | 2026-06-11 |
 | [PCAP Analysis](./LetsDefend/PCAP%20Analysis/) | LetsDefend | Network Forensics / PCAP Analysis | Beginner | 🔄 | - |
+| [Benign](./TryHackMe/Benign/) | TryHackMe | SIEM / Log Analysis / Threat Hunting | Medium | 🔄 | 2026-06-16 |
 | [ItsyBisy](./TryHackMe/ItsyBisy/) | TryHackMe | Network Analysis / SIEM / Log Analysis | Medium | ✅ | 2026-06-15 |
 | [Invite Only](./TryHackMe/Invite%20Only/) | TryHackMe | Threat Intelligence | Medium | ✅ | 2026-06-12 |
 | [Shadow Trace](./TryHackMe/Shadow-Trace/) | TryHackMe | Malware Analysis / Incident Response | Medium | ✅ | 2026-06-08 |
@@ -104,6 +105,7 @@ Learning path structured — saat ini fokus di **SOC Level 1**.
 
 | Module | Category | Status |
 |--------|----------|--------|
+| [Benign](./TryHackMe/Benign/) | SIEM / Log Analysis / Threat Hunting | 🔄 |
 | [ItsyBisy](./TryHackMe/ItsyBisy/) | Network Analysis / SIEM / Log Analysis | ✅ |
 | [Shadow Trace](./TryHackMe/Shadow-Trace/) | Malware Analysis / Incident Response | ✅ |
 | [Network Security Monitoring](./TryHackMe/SOC-Level-1/Network-Security-Monitoring/) | Network Security | ✅ |
