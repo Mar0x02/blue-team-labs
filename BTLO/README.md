@@ -23,6 +23,7 @@ Platform investigasi dan incident response. Setiap lab mensimulasikan insiden ny
 | [Log Analysis - Sysmon](./Log%20Analysis%20-%20Sysmon/) | Log Analysis / Threat Hunting | Medium | ✅ | 2026-05-30 |
 | [ATT&CK](./ATT&CK/) | Threat Intelligence | Easy | ✅ | 2026-06-01 |
 | [Injection Series Part 4](./Injection%20Series%20Part%204/) | Malware Analysis / Reverse Engineering | Medium | ✅ | 2026-05-07 |
+| [Network Analysis - Web Shell](./Network%20Analysis%20-%20Web%20Shell/) | Network Forensics / PCAP Analysis | Easy | 🔄 | 2026-06-18 |
 | [EROS](./EROS/) | Incident Response | Easy | ✅ | 2026-06-07 |
 | [ThePackages](./ThePackages/) | OSINT / Google Dorking | Easy | 🔄 | - |
 | [D3FEND](./D3FEND/) | Framework | Easy | ✅ | 2026-05-09 |
