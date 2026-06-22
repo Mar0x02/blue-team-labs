@@ -33,10 +33,10 @@ File zip diekstrak, didapat satu file `Traffic.pcapng`.
 
 ![Extract file zip](./assets/0.extract-file-zip.png)
 
-Langkah pertama jalankan Zeek untuk parsing log dari PCAP:
+Langkah pertama buka `Traffic.pcapng` di **Zui**, lalu jalankan query:
 
-```bash
-zeek -r Traffic.pcapng
+```
+Count() by _path
 ```
 
 Output `_path` yang relevan:
@@ -121,7 +121,7 @@ Gunakan tool [keepass-dump-extractor](https://github.com/matro7sh/keepass-dump-e
 ![GitHub repo extractor](./assets/9.github-repo-extractor.png)
 
 ```bash
-keepass-dump-extractor data-1337_decrypted.dmp
+keepass-dump-extractor data-1337_decrypted.dmp -f found
 ```
 
 Didapat password parsial: `NoWaYIcanF0rGetThis123` — tapi karakter pertamanya hilang.
