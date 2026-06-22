@@ -39,7 +39,7 @@ Dokumentasi perjalanan belajar Blue Team & SOC Analyst — berisi writeup challe
 | [Learn Sigma](./LetsDefend/Learn-Sigma/) | LetsDefend | Threat Detection / Sigma Rules | Beginner | ✅ | 2026-06-09 |
 | [Phishing Email](./LetsDefend/Phishing%20Email/) | LetsDefend | Email Forensics / Phishing Analysis | Beginner | ✅ | 2026-06-11 |
 | [PCAP Analysis](./LetsDefend/PCAP%20Analysis/) | LetsDefend | Network Forensics / PCAP Analysis | Beginner | 🔄 | - |
-| [Extracted](./TryHackMe/Extracted/) | TryHackMe | Digital Forensics / Network Forensics | Medium | 🔄 | 2026-06-21 |
+| [Extracted](./TryHackMe/Extracted/) | TryHackMe | Digital Forensics / Network Forensics / Malware Analysis | Medium | ✅ | 2026-06-22 |
 | [Investigating Windows 2.0](./TryHackMe/Investigating%20Windows%202.0/) | TryHackMe | Digital Forensics / Malware Analysis / Threat Hunting | Medium | 🔄 | 2026-06-20 |
 | [Investigating with Splunk](./TryHackMe/Investigating%20with%20Splunk/) | TryHackMe | SIEM / Log Analysis / Threat Hunting | Medium | ✅ | 2026-06-20 |
 | [Benign](./TryHackMe/Benign/) | TryHackMe | SIEM / Log Analysis / Threat Hunting | Medium | ✅ | 2026-06-16 |
@@ -110,7 +110,7 @@ Learning path structured — saat ini fokus di **SOC Level 1**.
 
 | Module | Category | Status |
 |--------|----------|--------|
-| [Extracted](./TryHackMe/Extracted/) | Digital Forensics / Network Forensics | 🔄 |
+| [Extracted](./TryHackMe/Extracted/) | Digital Forensics / Network Forensics / Malware Analysis | ✅ |
 | [Investigating Windows 2.0](./TryHackMe/Investigating%20Windows%202.0/) | Digital Forensics / Malware Analysis / Threat Hunting | 🔄 |
 | [Investigating with Splunk](./TryHackMe/Investigating%20with%20Splunk/) | SIEM / Log Analysis / Threat Hunting | ✅ |
 | [Benign](./TryHackMe/Benign/) | SIEM / Log Analysis / Threat Hunting | ✅ |
