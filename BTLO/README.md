@@ -27,6 +27,7 @@ Platform investigasi dan incident response. Setiap lab mensimulasikan insiden ny
 | [EROS](./EROS/) | Incident Response | Easy | ✅ | 2026-06-07 |
 | [Meta](./Meta/) | OSINT / Digital Forensics | Easy | ✅ | 2026-05-07 |
 | [PowerShell Analysis - Keylogger](./PowerShell%20Analysis%20-%20Keylogger/) | Malware Analysis / PowerShell Analysis | Easy | ✅ | 2026-05-19 |
+| [ILOVEYOU](./ILOVEYOU/) | Malware Analysis | Medium | ✅ | 2026-05-19 |
 | [ThePackages](./ThePackages/) | OSINT / Google Dorking | Easy | 🔄 | - |
 | [D3FEND](./D3FEND/) | Framework | Easy | ✅ | 2026-05-09 |
 | [Macro-ni](./Macro-ni/) | Malware Analysis | Medium | ✅ | - |

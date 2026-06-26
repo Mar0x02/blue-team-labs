@@ -14,6 +14,7 @@ Dokumentasi perjalanan belajar Blue Team & SOC Analyst — berisi writeup challe
 | [EROS](./BTLO/EROS/) | BTLO | Incident Response | Easy | ✅ | 2026-06-07 |
 | [Meta](./BTLO/Meta/) | BTLO | OSINT / Digital Forensics | Easy | ✅ | 2026-05-07 |
 | [PowerShell Analysis - Keylogger](./BTLO/PowerShell%20Analysis%20-%20Keylogger/) | BTLO | Malware Analysis / PowerShell Analysis | Easy | ✅ | 2026-05-19 |
+| [ILOVEYOU](./BTLO/ILOVEYOU/) | BTLO | Malware Analysis | Medium | ✅ | 2026-05-19 |
 | [ATT&CK](./BTLO/ATT&CK/) | BTLO | Threat Intelligence | Easy | ✅ | 2026-06-01 |
 | [Injection Series Part 4](./BTLO/Injection%20Series%20Part%204/) | BTLO | Malware Analysis / Reverse Engineering | Medium | ✅ | 2026-05-07 |
 | [Phishing Analysis](./BTLO/Phishing%20Analysis/) | BTLO | Email Forensics / Phishing Analysis | Easy | ✅ | 2026-05-31 |
@@ -81,6 +82,7 @@ Platform berbasis investigasi dan incident response. Setiap lab mensimulasikan i
 | [EROS](./BTLO/EROS/) | Incident Response | Easy | ✅ |
 | [Meta](./BTLO/Meta/) | OSINT / Digital Forensics | Easy | ✅ |
 | [PowerShell Analysis - Keylogger](./BTLO/PowerShell%20Analysis%20-%20Keylogger/) | Malware Analysis / PowerShell Analysis | Easy | ✅ |
+| [ILOVEYOU](./BTLO/ILOVEYOU/) | Malware Analysis | Medium | ✅ |
 | [Network Analysis - Web Shell](./BTLO/Network%20Analysis%20-%20Web%20Shell/) | Network Forensics / PCAP Analysis | Easy | ✅ |
 | [ThePackages](./BTLO/ThePackages/) | OSINT / Google Dorking | Easy | 🔄 |
 
