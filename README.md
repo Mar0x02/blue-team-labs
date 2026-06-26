@@ -18,6 +18,7 @@ Dokumentasi perjalanan belajar Blue Team & SOC Analyst — berisi writeup challe
 | [Spectrum](./BTLO/Spectrum/) | BTLO | Digital Forensics / Steganography | Medium | ✅ | 2026-05-22 |
 | [Reverse Engineering - Another Injection](./BTLO/Reverse%20Engineering%20-%20Another%20Injection/) | BTLO | Reverse Engineering / Malware Analysis | Hard | ✅ | 2026-05-24 |
 | [Melissa](./BTLO/Melissa/) | BTLO | Malware Analysis / Macro Virus | Easy | ✅ | 2026-05-24 |
+| [Testa](./BTLO/Testa/) | BTLO | OT Security / ICS Forensics | Medium | ✅ | 2026-05-28 |
 | [ATT&CK](./BTLO/ATT&CK/) | BTLO | Threat Intelligence | Easy | ✅ | 2026-06-01 |
 | [Injection Series Part 4](./BTLO/Injection%20Series%20Part%204/) | BTLO | Malware Analysis / Reverse Engineering | Medium | ✅ | 2026-05-07 |
 | [Phishing Analysis](./BTLO/Phishing%20Analysis/) | BTLO | Email Forensics / Phishing Analysis | Easy | ✅ | 2026-05-31 |
@@ -89,6 +90,7 @@ Platform berbasis investigasi dan incident response. Setiap lab mensimulasikan i
 | [Spectrum](./BTLO/Spectrum/) | Digital Forensics / Steganography | Medium | ✅ |
 | [Reverse Engineering - Another Injection](./BTLO/Reverse%20Engineering%20-%20Another%20Injection/) | Reverse Engineering / Malware Analysis | Hard | ✅ |
 | [Melissa](./BTLO/Melissa/) | Malware Analysis / Macro Virus | Easy | ✅ |
+| [Testa](./BTLO/Testa/) | OT Security / ICS Forensics | Medium | ✅ |
 | [Network Analysis - Web Shell](./BTLO/Network%20Analysis%20-%20Web%20Shell/) | Network Forensics / PCAP Analysis | Easy | ✅ |
 | [ThePackages](./BTLO/ThePackages/) | OSINT / Google Dorking | Easy | 🔄 |
 

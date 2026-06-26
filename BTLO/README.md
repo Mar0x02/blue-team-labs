@@ -31,6 +31,7 @@ Platform investigasi dan incident response. Setiap lab mensimulasikan insiden ny
 | [Spectrum](./Spectrum/) | Digital Forensics / Steganography | Medium | ✅ | 2026-05-22 |
 | [Reverse Engineering - Another Injection](./Reverse%20Engineering%20-%20Another%20Injection/) | Reverse Engineering / Malware Analysis | Hard | ✅ | 2026-05-24 |
 | [Melissa](./Melissa/) | Malware Analysis / Macro Virus | Easy | ✅ | 2026-05-24 |
+| [Testa](./Testa/) | OT Security / ICS Forensics | Medium | ✅ | 2026-05-28 |
 | [ThePackages](./ThePackages/) | OSINT / Google Dorking | Easy | 🔄 | - |
 | [D3FEND](./D3FEND/) | Framework | Easy | ✅ | 2026-05-09 |
 | [Macro-ni](./Macro-ni/) | Malware Analysis | Medium | ✅ | - |
