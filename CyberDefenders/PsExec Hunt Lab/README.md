@@ -57,6 +57,8 @@ Port yang terlibat: `445` (SMB), `135` (RPC), `53` (DNS), `80` (HTTP), `49669` (
 
 ### 1. IP address of the machine from which the attacker initially gained access?
 
+![PSEXESVC Transfer](./assets/2.png)
+
 Dari analisis traffic, `10.0.0.130` memiliki byte transfer besar ke `10.0.0.133` dan merupakan sumber dari seluruh rangkaian SMB negotiation, authentication, dan file transfer `PSEXESVC.exe`. IP ini adalah host yang sudah dikompromise dan digunakan attacker sebagai jumping point.
 
 **Jawaban:** `10.0.0.130`
@@ -68,8 +70,9 @@ Dari analisis traffic, `10.0.0.130` memiliki byte transfer besar ke `10.0.0.133`
 Filter SMB traffic ke target pertama:
 
 ```
-ip.dst == 10.0.0.133 && smb2
+ip.src == 10.0.0.133 && smb2
 ```
+![IPC$ Communication](./assets/3.png)
 
 Dari SMB session setup, ditemukan target name mesin di `10.0.0.133` adalah `sales-PC`.
 
@@ -97,8 +100,6 @@ Setelah authentication berhasil, attacker melakukan SMB Write ke share `ADMIN$`.
 SMB2 Write Request → \\ADMIN$\PSEXESVC.exe
 ```
 
-![PSEXESVC Transfer](./assets/2.png)
-
 **Jawaban:** `PSEXESVC.exe`
 
 ---
@@ -114,8 +115,6 @@ Dari packet SMB2 Tree Connect sebelum file transfer, attacker melakukan connect 
 ### 6. Network share used by PsExec for communication?
 
 Setelah instalasi service, PsExec membuka named pipe untuk komunikasi command/response via share `IPC$`. Terlihat dari SMB2 Tree Connect ke `\\sales-PC\IPC$` dan pembuatan pipe `PSEXESVC-HR-PC-7980-stdin/stdout/stderr`.
-
-![IPC$ Communication](./assets/3.png)
 
 **Jawaban:** `IPC$`
 
