@@ -10,6 +10,7 @@ Platform blue team dengan skenario forensik dan threat hunting berbasis PCAP, me
 
 | Challenge | Category | Difficulty | Status | Date |
 |-----------|----------|------------|--------|------|
+| [GrabThePhisher Lab](./GrabThePhisher%20Lab/) | Threat Intelligence | Easy | ✅ | 2026-08-08 |
 | [PsExec Hunt Lab](./PsExec%20Hunt%20Lab/) | Network Forensics | Easy | ✅ | 2026-06-26 |
 | [DanaBot](./DanaBot/) | Network Forensics | Medium | ✅ | 2026-06-10 |
 | [Tusk Infostealer Lab](./Tusk%20Infostealer%20Lab/) | Threat Intelligence | Easy | ✅ | 2026-06-09 |

@@ -36,6 +36,7 @@ Dokumentasi perjalanan belajar Blue Team & SOC Analyst — berisi writeup challe
 | [D3FEND](./BTLO/D3FEND/) | BTLO | Framework | Easy | ✅ | 2026-05-09 |
 | [Macro-ni](./BTLO/Macro-ni/) | BTLO | Malware Analysis | Medium | ✅ | - |
 | [Curiosity](./BTLO/Curiosity/) | BTLO | Threat Hunting | Medium | ✅ | - |
+| [GrabThePhisher Lab](./CyberDefenders/GrabThePhisher%20Lab/) | CyberDefenders | Threat Intelligence | Easy | ✅ | 2026-08-08 |
 | [PsExec Hunt Lab](./CyberDefenders/PsExec%20Hunt%20Lab/) | CyberDefenders | Network Forensics | Easy | ✅ | 2026-06-26 |
 | [DanaBot](./CyberDefenders/DanaBot/) | CyberDefenders | Network Forensics | Medium | ✅ | 2026-06-10 |
 | [Tusk Infostealer Lab](./CyberDefenders/Tusk%20Infostealer%20Lab/) | CyberDefenders | Threat Intelligence | Easy | ✅ | 2026-06-09 |
@@ -101,6 +102,7 @@ Platform blue team dengan skenario forensik dan threat hunting berbasis PCAP, me
 
 | Challenge | Category | Difficulty | Status |
 |-----------|----------|------------|--------|
+| [GrabThePhisher Lab](./CyberDefenders/GrabThePhisher%20Lab/) | Threat Intelligence | Easy | ✅ |
 | [PsExec Hunt Lab](./CyberDefenders/PsExec%20Hunt%20Lab/) | Network Forensics | Easy | ✅ |
 | [DanaBot](./CyberDefenders/DanaBot/) | Network Forensics | Medium | ✅ |
 | [Tusk Infostealer Lab](./CyberDefenders/Tusk%20Infostealer%20Lab/) | Threat Intelligence | Easy | ✅ |
