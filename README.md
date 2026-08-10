@@ -36,6 +36,7 @@ Dokumentasi perjalanan belajar Blue Team & SOC Analyst — berisi writeup challe
 | [D3FEND](./BTLO/D3FEND/) | BTLO | Framework | Easy | ✅ | 2026-05-09 |
 | [Macro-ni](./BTLO/Macro-ni/) | BTLO | Malware Analysis | Medium | ✅ | - |
 | [Curiosity](./BTLO/Curiosity/) | BTLO | Threat Hunting | Medium | ✅ | - |
+| [Yellow RAT Lab](./CyberDefenders/Yellow%20RAT%20Lab/) | CyberDefenders | Threat Intelligence | Easy | ✅ | 2026-08-10 |
 | [Tomcat Takeover Lab](./CyberDefenders/Tomcat%20Takeover%20Lab/) | CyberDefenders | Network Forensics | Easy | ✅ | 2026-08-10 |
 | [GrabThePhisher Lab](./CyberDefenders/GrabThePhisher%20Lab/) | CyberDefenders | Threat Intelligence | Easy | ✅ | 2026-08-08 |
 | [PsExec Hunt Lab](./CyberDefenders/PsExec%20Hunt%20Lab/) | CyberDefenders | Network Forensics | Easy | ✅ | 2026-06-26 |
@@ -103,6 +104,7 @@ Platform blue team dengan skenario forensik dan threat hunting berbasis PCAP, me
 
 | Challenge | Category | Difficulty | Status |
 |-----------|----------|------------|--------|
+| [Yellow RAT Lab](./CyberDefenders/Yellow%20RAT%20Lab/) | Threat Intelligence | Easy | ✅ |
 | [Tomcat Takeover Lab](./CyberDefenders/Tomcat%20Takeover%20Lab/) | Network Forensics | Easy | ✅ |
 | [GrabThePhisher Lab](./CyberDefenders/GrabThePhisher%20Lab/) | Threat Intelligence | Easy | ✅ |
 | [PsExec Hunt Lab](./CyberDefenders/PsExec%20Hunt%20Lab/) | Network Forensics | Easy | ✅ |
