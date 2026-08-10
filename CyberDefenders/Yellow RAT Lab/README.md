@@ -109,6 +109,7 @@ Masih dari artikel yang sama, Yellow Cockatoo connect ke C2 di `https://gogohid[
 | Malware Family | Yellow Cockatoo RAT (aka `trojan.msil/polazert`) | .NET RAT, loads in-memory |
 | Compilation Timestamp | `2020-09-24 18:26:47 UTC` | Waktu compile sample |
 | First Submission (VT) | `2020-10-15 02:47:37 UTC` | Pertama kali sample di-submit ke VirusTotal |
+| Persistence Artifact | `.lnk` shortcut di Startup folder | Trigger `cmd.exe` → PowerShell buat reflectively load ulang DLL ke memory tiap login |
 
 ---
 
@@ -117,6 +118,8 @@ Masih dari artikel yang sama, Yellow Cockatoo connect ke C2 di `https://gogohid[
 | Tactic | Technique | ID | Keterangan |
 |--------|-----------|----|------------|
 | Execution | User Execution: Malicious File | T1204.002 | Korban download & jalanin installer palsu setelah search query di-redirect |
+| Persistence, Privilege Escalation | Boot or Logon Autostart Execution: Registry Run Keys / Startup Folder | T1547.001 | `.lnk` shortcut di Startup folder buat re-trigger malware tiap user login |
+| Execution | Command and Scripting Interpreter: PowerShell | T1059.001 | PowerShell pakai `System.Reflection.Assembly` buat reflectively load DLL RAT ke memory |
 | Discovery | System Information Discovery | T1082 | Malware kumpulin host info sebelum check-in ke C2 |
 | Command and Control | Application Layer Protocol: Web Protocols | T1071.001 | Komunikasi C2 via HTTP GET ke `gogohid.com` |
 | Command and Control | Data Encoding | T1132 | Host info & command status dikirim sebagai byte-encoded JSON string di URL |
@@ -128,18 +131,20 @@ Masih dari artikel yang sama, Yellow Cockatoo connect ke C2 di `https://gogohid[
 
 ### Attacker Behavior
 
-Yellow Cockatoo adalah .NET RAT yang loads langsung di memory (nggak nulis payload utama ke disk), biasa didistribusikan lewat teknik semacam malvertising/SEO poisoning — korban nyari sesuatu di search engine, tapi hasil pencarian mereka di-redirect ke situs yang nawarin fake installer. Ini persis sama pola yang disebut di scenario lab ini: "search query karyawan ter-redirect ke website yang nggak dikenal".
+Yellow Cockatoo adalah .NET RAT yang tereksekusi di memory, biasa didistribusikan lewat teknik semacam malvertising/SEO poisoning — korban nyari sesuatu di search engine, tapi hasil pencarian mereka di-redirect ke situs yang nawarin fake installer. Ini persis sama pola yang disebut di scenario lab ini: "search query karyawan ter-redirect ke website yang nggak dikenal".
 
-Begitu DLL-nya jalan, alurnya kurang lebih:
+Begitu installer palsu dijalanin, malware bikin **persistence** dulu sebelum mulai beraksi — drop file `.lnk` (shortcut) ke Startup folder Windows. Shortcut inilah yang bikin malware ini nyala lagi otomatis tiap kali user login: `.lnk` trigger `cmd.exe`, yang lanjut manggil PowerShell, dan PowerShell inilah yang pakai `System.Reflection.Assembly` buat reflectively load DLL RAT-nya (dalam bentuk obfuscated) langsung ke memory — nggak nulis payload utama dalam bentuk plain ke disk.
+
+Setelah RAT-nya aktif di memory, alur C2-nya kurang lebih gini:
 
 1. **Kumpulin host information** dari mesin korban
-2. **Generate random string** dan simpen ke `%USERPROFILE%\AppData\Roaming\solarmarker.dat` — dipakai sebagai unique identifier host tersebut
-3. **Connect ke C2** di `gogohid[.]com/gate?q=ENCODED_HOST_INFO` — kirim host info (encoded) dan minta command pertama
-4. **Retrieve & parse command** dari C2 dalam infinite loop
+2. **Generate random string** dan simpen ke `%USERPROFILE%\AppData\Roaming\solarmarker.dat` — dipakai sebagai unique identifier (`hwid`) host tersebut, biar C2 bisa ngenalin host yang sama tiap kali check-in ulang
+3. **Connect ke C2** di `gogohid[.]com/gate?q=ENCODED_HOST_INFO` — kirim host info + `hwid` (encoded), lalu C2 balikin command yang udah di-stage buat host itu
+4. **Retrieve & parse command** dari C2 dalam infinite loop — ini model *polling/beacon*, bukan interaktif real-time. Malware yang inisiatif nanya duluan ke C2, bukan attacker yang push command kapan aja dia mau
 5. Setiap command yang dieksekusi, status-nya di-report balik ke `gogohid[.]com/success?i=ENCODED_CMD_AND_HOST_ID_INFO`
 6. Download **second-stage payload** dan eksekusi — lalu ulangi loop dari langkah 3
 
-Karena semua command-and-control ini jalan di memory dan komunikasinya di-encode, Yellow Cockatoo cukup susah dideteksi cuma dari static file analysis — butuh kombinasi network monitoring (traffic ke domain C2) sama behavioral analysis.
+Karena payload utamanya cuma ada di memory (bukan plain di disk) dan komunikasi C2-nya di-encode, Yellow Cockatoo cukup susah dideteksi cuma dari static file analysis — jejak paling jelas yang ketinggalan di disk cuma `.lnk` di Startup folder dan `solarmarker.dat`. Butuh kombinasi network monitoring (traffic ke domain C2) sama behavioral/memory analysis buat deteksi yang lebih reliable.
 
 ### Todo / Follow-up
 
