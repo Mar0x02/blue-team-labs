@@ -10,6 +10,7 @@ Platform blue team dengan skenario forensik dan threat hunting berbasis PCAP, me
 
 | Challenge | Category | Difficulty | Status | Date |
 |-----------|----------|------------|--------|------|
+| [The Crime Lab](./The%20Crime%20Lab/) | Endpoint Forensics | Easy | ✅ | 2026-08-11 |
 | [IcedID Lab](./IcedID%20Lab/) | Threat Intelligence | Easy | ✅ | 2026-08-11 |
 | [Yellow RAT Lab](./Yellow%20RAT%20Lab/) | Threat Intelligence | Easy | ✅ | 2026-08-10 |
 | [Tomcat Takeover Lab](./Tomcat%20Takeover%20Lab/) | Network Forensics | Easy | ✅ | 2026-08-10 |
