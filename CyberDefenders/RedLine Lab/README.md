@@ -91,6 +91,8 @@ sha256sum pid.5896.vad.0x400000-0x437fff.dmp
 ```
 Hash di-cross-check ke VirusTotal: **32/72 vendor flag sebagai malware**, dengan family label **Amadey**. Menarik — nama lab-nya "RedLine", tapi payload yang ke-hollow di memory ini identified sebagai Amadey (loader/botnet malware yang emang dikenal sering dipakai buat drop RedLine Stealer sebagai payload tahap berikutnya).
 
+**Catatan teknis soal dump ini:** file `pid.5896.vad.0x400000-0x437fff.dmp` adalah **raw memory image dari satu VAD region**, bukan file `.exe` apa adanya dari disk. Section-nya page-aligned (ngikutin layout memory), bukan file-aligned kayak PE di disk, dan IAT-nya kemungkinan udah ke-resolve (import table udah berubah jadi pointer, bukan nama fungsi lagi) — jadi kalau mau dijalanin ulang atau dianalisis lebih dalam butuh **PE realignment** dulu (misal pakai `pe-sieve`/`hollows_hunter`), nggak langsung plug-and-play. Yang bisa disimpulkan valid dari hash ini adalah **identifikasi family malware** (karena AV signature umumnya berbasis payload yang udah ke-unpack, bukan byte-perfect match ke file di disk) — bukan klaim "ini exact sama kayak file `oneetx.exe` yang di-drop ke disk attacker", karena representasinya emang beda (memory vs disk), meskipun secara logic isinya berasal dari proses yang sama.
+
 ---
 
 ### 4. What is the name of the process responsible for the VPN connection?
