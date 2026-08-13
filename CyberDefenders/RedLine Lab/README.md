@@ -101,6 +101,10 @@ Masih dari `pstree`, ada chain: `explorer.exe` (3556) → `Outline.exe` (6724) �
 
 **Jawaban:** `Outline.exe`
 
+**Catatan analisis:** secara process tree, `Outline.exe`/`tun2socks.exe` **nggak punya relasi parent-child** sama `oneetx.exe` — dua cabang proses yang independen. Tapi dari `netscan` kelihatan pola local IP yang menarik: `tun2socks.exe` konek keluar dari `192.168.190.141` (NIC asli/fisik) ke server VPN `38.121.43.65:443`, sementara proses-proses lain di mesin ini — termasuk `svchost.exe`, `msedge.exe`, `SkypeApp.exe`, **dan `oneetx.exe`** — semuanya pakai local IP `10.0.85.2` (virtual TUN adapter yang dibikin Outline pas VPN aktif).
+
+Ini indikasi VPN-nya jalan dalam mode **full-tunnel** — begitu aktif, semua traffic sistem (bukan cuma traffic yang "dipilih" attacker) otomatis ke-capture lewat TUN interface dan diteruskan `tun2socks` ke server VPN, termasuk traffic `oneetx.exe` ke C2-nya. Jadi bukan bukti bahwa **malware secara sadar memanggil/menyalahgunakan Outline**, melainkan traffic-nya kebetulan ikut ke-tunnel karena VPN-nya emang full-system. Belum bisa dipastikan dari evidence yang ada apakah Outline ini sengaja dipasang attacker buat evasion, atau ini tool VPN pribadi milik user yang udah terpasang duluan dan cuma "kebetulan" nutupin traffic malware juga.
+
 ---
 
 ### 5. What is the attacker's IP address?
@@ -166,7 +170,7 @@ Convert device path ke drive letter standar (`HarddiskVolume3` = `C:`):
 | IP Address | `77.91.124.20` | C2 server attacker — satu `/24` subnet (`77.91.124.0/24`) sama C2 RedLine Stealer di [Red Stealer Lab](../Red%20Stealer%20Lab/) (`77.91.124.55:19071`), indikasi shared hosting infrastructure |
 | URL | `hxxp[://]77[.]91[.]124[.]20/store/games/index[.]php` | Endpoint exfiltration data |
 | File Path | `C:\Users\Tammam\AppData\Local\Temp\c3912af058\oneetx.exe` | Path lengkap payload malware |
-| VPN Process | `Outline.exe` / `tun2socks.exe` (PID 4628) | Kemungkinan dipakai buat bypass NIDS |
+| VPN Process | `Outline.exe` / `tun2socks.exe` (PID 4628) | Full-tunnel VPN aktif di mesin — traffic `oneetx.exe` ikut ke-tunnel (local IP `10.0.85.2` sama kayak proses sistem lain), tapi **belum bisa dipastikan** ini attacker tooling atau VPN pribadi user |
 
 ---
 
@@ -177,7 +181,7 @@ Convert device path ke drive letter standar (`HarddiskVolume3` = `C:`):
 | Defense Evasion | Process Injection: Process Hollowing | [T1055.012](https://attack.mitre.org/techniques/T1055/012/) | `oneetx.exe` region base image RWX berisi MZ header lengkap |
 | Defense Evasion | System Binary Proxy Execution: Rundll32 | [T1218.011](https://attack.mitre.org/techniques/T1218/011/) | `oneetx.exe` men-spawn `rundll32.exe` |
 | Command and Control | Application Layer Protocol: Web Protocols | [T1071.001](https://attack.mitre.org/techniques/T1071/001/) | Koneksi HTTP ke `77.91.124.20:80` |
-| Command and Control / Defense Evasion | Protocol Tunneling | [T1572](https://attack.mitre.org/techniques/T1572/) | Traffic C2/exfil dibungkus tunnel Outline VPN — enkripsi bikin NIDS nggak bisa inspect isi paket, jadi berfungsi ganda sebagai C2 channel sekaligus evasion |
+| Defense Evasion *(unconfirmed attribution)* | Protocol Tunneling | [T1572](https://attack.mitre.org/techniques/T1572/) | Traffic `oneetx.exe` ikut ke-tunnel lewat full-system Outline VPN (local IP `10.0.85.2`, sama kayak proses lain) — efeknya NIDS nggak bisa inspect isi paket, tapi belum jelas apakah ini teknik evasion yang sengaja dipakai attacker atau cuma efek samping VPN korban yang udah aktif duluan |
 | Exfiltration | Exfiltration Over C2 Channel | [T1041](https://attack.mitre.org/techniques/T1041/) | Data dikirim ke endpoint `/store/games/index.php` |
 
 ---
@@ -196,7 +200,9 @@ Untuk exfiltration/C2, malware konek keluar ke `77.91.124.20:80` dan (dari strin
 
 IP C2 ini nggak ketemu entry spesifik di ThreatFox buat Amadey, tapi menariknya `77.91.124.20` satu `/24` subnet (`77.91.124.0/24`) sama C2 yang ditemuin di lab [Red Stealer Lab](../Red%20Stealer%20Lab/) — `77.91.124.55:19071`, yang confirmed **RedLine Stealer (alias RECORDSTEALER)**. Overlap subnet ini nguatin dugaan Amadey di lab ini emang bagian dari kill chain yang sama/terhubung sama operator RedLine — kemungkinan hosting block yang dipakai bareng oleh affiliate MaaS yang sama.
 
-Menariknya, di mesin yang sama juga berjalan **Outline VPN client** (`Outline.exe` → `tun2socks.exe`) yang bikin tunnel terenkripsi keluar jaringan. Ini kemungkinan besar jadi cara traffic C2/exfiltration **bypass Network Intrusion Detection System (NIDS)** — request yang seharusnya kelihatan plaintext HTTP ke IP mencurigakan malah ke-wrap di dalam tunnel VPN terenkripsi, jadi signature-based NIDS yang cuma inspect traffic plaintext nggak nangkep pola request ke `77.91.124.20`.
+Di mesin yang sama juga berjalan **Outline VPN client** (`Outline.exe` → `tun2socks.exe`), tapi secara process tree ini **independen** dari `oneetx.exe` — nggak ada relasi parent-child. Yang ngebuktiin traffic-nya beneran nyambung adalah pola local IP di `netscan`: `tun2socks.exe` konek keluar dari NIC asli (`192.168.190.141`) ke server VPN, sementara `oneetx.exe` — sama kayak `svchost.exe`, `msedge.exe`, `SkypeApp.exe` — pakai local IP `10.0.85.2` (virtual TUN adapter). Ini indikasi VPN-nya jalan mode **full-tunnel**, jadi semua traffic sistem otomatis ke-capture lewat TUN interface, termasuk punya `oneetx.exe`.
+
+Efeknya ke NIDS tetep sama — request plaintext ke `77.91.124.20` ke-wrap di dalam tunnel VPN terenkripsi, jadi signature-based NIDS nggak nangkep pola request-nya. Tapi **penting buat digarisbawahi**: ini beda dari klaim "attacker sengaja pakai VPN buat evasion". Yang ke-buktiin dari evidence cuma korelasi (traffic malware kebetulan ikut ke-tunnel), bukan kausalitas (malware/attacker yang manggil VPN itu). Kemungkinannya ada dua — Outline ini attacker tooling yang sengaja dipasang buat nutupin C2, **atau** ini VPN pribadi milik user/korban yang udah aktif duluan dan cuma kebetulan "nutupin" traffic malware juga. Nggak bisa dibedain dari mem dump snapshot doang — perlu timeline instalasi Outline vs waktu eksekusi `oneetx.exe` buat mastiin.
 
 ### Todo / Follow-up
 
@@ -204,7 +210,7 @@ Menariknya, di mesin yang sama juga berjalan **Outline VPN client** (`Outline.ex
 - [x] ~~Cross-check IP `77.91.124.20` ke ThreatFox~~ — nggak ada entry spesifik buat Amadey, tapi satu `/24` subnet sama C2 RedLine Stealer di [Red Stealer Lab](../Red%20Stealer%20Lab/) (`77.91.124.55:19071`)
 - [ ] Cross-check IP `77.91.124.20` ke AbuseIPDB/Shodan buat cek riwayat abuse & cari IP lain di subnet `77.91.124.0/24` yang udah ke-flag
 - [ ] Pelajari relasi Amadey → RedLine Stealer di kill chain ini — apakah ada payload tahap kedua yang belum ke-drop pas mem dump diambil, dan apakah shared subnet ini indikasi operator/affiliate yang sama
-- [ ] Pelajari lebih lanjut kenapa Outline VPN terpasang di mesin ini — bagian dari inisial access attacker, atau tool korban yang disalahgunakan
+- [ ] Cek install timestamp/prefetch Outline VPN vs waktu eksekusi `oneetx.exe` — buat mastiin apakah VPN ini attacker tooling atau tool pribadi korban yang udah ada duluan
 - [ ] Cek registry Run key/scheduled task buat konfirmasi mekanisme persistence `oneetx.exe`
 
 ---
