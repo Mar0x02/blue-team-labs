@@ -10,6 +10,7 @@ Platform blue team dengan skenario forensik dan threat hunting berbasis PCAP, me
 
 | Challenge | Category | Difficulty | Status | Date |
 |-----------|----------|------------|--------|------|
+| [3CX Supply Chain Lab](./3CX%20Supply%20Chain%20Lab/) | Threat Intelligence | Easy | 🔄 | 2026-08-13 |
 | [Reveal Lab](./Reveal%20Lab/) | Endpoint Forensics | Easy | ✅ | 2026-08-13 |
 | [RedLine Lab](./RedLine%20Lab/) | Endpoint Forensics | Easy | ✅ | 2026-08-12 |
 | [Red Stealer Lab](./Red%20Stealer%20Lab/) | Threat Intelligence | Easy | ✅ | 2026-08-12 |
