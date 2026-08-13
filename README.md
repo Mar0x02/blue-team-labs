@@ -10,6 +10,7 @@ Dokumentasi perjalanan belajar Blue Team & SOC Analyst — berisi writeup challe
 
 | Challenge | Platform | Category | Difficulty | Status | Date |
 |-----------|----------|----------|------------|--------|------|
+| [Reveal Lab](./CyberDefenders/Reveal%20Lab/) | CyberDefenders | Endpoint Forensics | Easy | 🔄 | 2026-08-13 |
 | [RedLine Lab](./CyberDefenders/RedLine%20Lab/) | CyberDefenders | Endpoint Forensics | Easy | ✅ | 2026-08-12 |
 | [Red Stealer Lab](./CyberDefenders/Red%20Stealer%20Lab/) | CyberDefenders | Threat Intelligence | Easy | ✅ | 2026-08-12 |
 | [Network Analysis - Web Shell](./BTLO/Network%20Analysis%20-%20Web%20Shell/) | BTLO | Network Forensics / PCAP Analysis | Easy | ✅ | 2026-06-18 |
@@ -109,6 +110,7 @@ Platform blue team dengan skenario forensik dan threat hunting berbasis PCAP, me
 
 | Challenge | Category | Difficulty | Status |
 |-----------|----------|------------|--------|
+| [Reveal Lab](./CyberDefenders/Reveal%20Lab/) | Endpoint Forensics | Easy | 🔄 |
 | [RedLine Lab](./CyberDefenders/RedLine%20Lab/) | Endpoint Forensics | Easy | ✅ |
 | [Red Stealer Lab](./CyberDefenders/Red%20Stealer%20Lab/) | Threat Intelligence | Easy | ✅ |
 | [Yellow RAT Lab](./CyberDefenders/Yellow%20RAT%20Lab/) | Threat Intelligence | Easy | ✅ |
