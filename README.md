@@ -10,6 +10,7 @@ Dokumentasi perjalanan belajar Blue Team & SOC Analyst — berisi writeup challe
 
 | Challenge | Platform | Category | Difficulty | Status | Date |
 |-----------|----------|----------|------------|--------|------|
+| [BlackEnergy Lab](./CyberDefenders/BlackEnergy%20Lab/) | CyberDefenders | Endpoint Forensics | Medium | 🔄 | 2026-08-15 |
 | [OpenWire Lab](./CyberDefenders/OpenWire%20Lab/) | CyberDefenders | Network Forensics | Medium | ✅ | 2026-08-14 |
 | [3CX Supply Chain Lab](./CyberDefenders/3CX%20Supply%20Chain%20Lab/) | CyberDefenders | Threat Intelligence | Easy | ✅ | 2026-08-14 |
 | [Reveal Lab](./CyberDefenders/Reveal%20Lab/) | CyberDefenders | Endpoint Forensics | Easy | ✅ | 2026-08-13 |
@@ -112,6 +113,7 @@ Platform blue team dengan skenario forensik dan threat hunting berbasis PCAP, me
 
 | Challenge | Category | Difficulty | Status |
 |-----------|----------|------------|--------|
+| [BlackEnergy Lab](./CyberDefenders/BlackEnergy%20Lab/) | Endpoint Forensics | Medium | 🔄 |
 | [OpenWire Lab](./CyberDefenders/OpenWire%20Lab/) | Network Forensics | Medium | ✅ |
 | [3CX Supply Chain Lab](./CyberDefenders/3CX%20Supply%20Chain%20Lab/) | Threat Intelligence | Easy | ✅ |
 | [Reveal Lab](./CyberDefenders/Reveal%20Lab/) | Endpoint Forensics | Easy | ✅ |
