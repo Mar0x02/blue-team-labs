@@ -82,7 +82,15 @@ Buka VirusTotal tab **Behavior → MITRE ATT&CK Tactics and Techniques**. Di kat
 
 ![MITRE mapping - persistence](./assets/virustotal-behavior-mitre-attack-1.png)
 
-**Jawaban:** `T1574`
+**Compare analysis — VirusTotal vs MITRE ATT&CK terkini:**
+
+VT nge-tag behavior sample ini pakai ID **T1574.002 (DLL Side-Loading)**, dan secara teknik ini emang paling akurat ngedeskripsiin apa yang kejadian: `3CXDesktopApp.exe` (aplikasi legit yang di-sign) di-trick buat nge-load `ffmpeg.dll` versi trojanized yang ditaro di folder yang sama — bukan hijack search order biasa, tapi sideloading langsung ke aplikasi yang emang expect nge-load DLL itu.
+
+Tapi pas dicek langsung ke halaman resmi `attack.mitre.org`, **T1574.002 sebagai ID berdiri sendiri udah nggak ada**. MITRE re-organize sub-technique `T1574.001` — namanya disederhanain jadi cuma **"DLL"**, dan cakupannya digabung meliputi dua konsep sekaligus: *DLL Search Order Hijacking* dan *DLL Side-Loading*, sebagai dua subsection di dalam satu technique yang sama. Nggak ada catatan resmi "deprecated/merged from .002" di halamannya, tapi dari struktur sub-technique list yang sekarang (`.001, .004–.014`, tanpa `.002` dan `.003`), jelas konsolidasi ini yang kejadian.
+
+Gap ini nunjukkin hal yang penting buat analyst: **taxonomy mapping di tools pihak ketiga (VT, EDR, SIEM) nggak selalu real-time sync** ke perubahan terbaru MITRE ATT&CK. VT kemungkinan masih pakai snapshot data lama pas nge-generate behavior tag ini. Jadi kalau lo mau cross-reference technique ID ke MITRE Navigator atau bikin detection rule berbasis ATT&CK ID, selalu double-check ke source resmi dulu — jangan langsung percaya ID yang keluar dari vendor tool tanpa validasi.
+
+**Jawaban:** `T1574` — sesuai apa yang ditampilkan VT saat behavior analysis ini dijalankan. Kalau mengacu ke taksonomi MITRE ATT&CK yang berlaku sekarang, technique yang sama sekarang tercakup di bawah **T1574.001 (DLL)**.
 
 ---
 
@@ -128,8 +136,8 @@ Trend Micro reverse-engineer `d3dcompiler_47.dll` dan nemuin shellcode-nya di-de
 
 Cek MITRE ATT&CK — grup **AppleJeus (G1049)**, threat actor North Korea state-sponsored di bawah payung **Lazarus Group**, secara eksplisit disebut bertanggung jawab atas 3CX Supply Chain Attack (campaign **C0057**). Cluster teknis yang eksekusi serangan ini dilacak sebagai **UNC4736**, terasosiasi ke AppleJeus.
 
-![MITRE AppleJeus group](./assets/mitre-attack-applejeus-group.png)
 ![MITRE 3CX Supply Chain campaign](./assets/mitre-attack-3cx-campaign.png)
+![MITRE AppleJeus group](./assets/mitre-attack-applejeus-group.png)
 
 **Jawaban:** `Lazarus` (via subgroup AppleJeus / cluster UNC4736)
 
