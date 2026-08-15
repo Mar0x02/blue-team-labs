@@ -10,7 +10,7 @@ Platform blue team dengan skenario forensik dan threat hunting berbasis PCAP, me
 
 | Challenge | Category | Difficulty | Status | Date |
 |-----------|----------|------------|--------|------|
-| [BlackEnergy Lab](./BlackEnergy%20Lab/) | Endpoint Forensics | Medium | 🔄 | 2026-08-15 |
+| [BlackEnergy Lab](./BlackEnergy%20Lab/) | Endpoint Forensics | Medium | ✅ | 2026-08-15 |
 | [OpenWire Lab](./OpenWire%20Lab/) | Network Forensics | Medium | ✅ | 2026-08-14 |
 | [3CX Supply Chain Lab](./3CX%20Supply%20Chain%20Lab/) | Threat Intelligence | Easy | ✅ | 2026-08-14 |
 | [Reveal Lab](./Reveal%20Lab/) | Endpoint Forensics | Easy | ✅ | 2026-08-13 |
