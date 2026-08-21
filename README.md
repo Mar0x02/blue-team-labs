@@ -10,6 +10,7 @@ Dokumentasi perjalanan belajar Blue Team & SOC Analyst — berisi writeup challe
 
 | Challenge | Platform | Category | Difficulty | Status | Date |
 |-----------|----------|----------|------------|--------|------|
+| [Source](./BTLO/Source/) | BTLO | Manual Code Review / Vulnerability Research | Medium | ✅ | 2026-08-21 |
 | [Hidden Launch](./BTLO/Hidden%20Launch/) | BTLO | Digital Forensics / macOS Forensics | Medium | 🔄 | - |
 | [Network Analysis - Ransomware](./BTLO/Network%20Analysis%20-%20Ransomware/) | BTLO | Network Forensics / PCAP Analysis | Medium | ✅ | 2026-08-21 |
 | [BlackEnergy Lab](./CyberDefenders/BlackEnergy%20Lab/) | CyberDefenders | Endpoint Forensics | Medium | ✅ | 2026-08-15 |
@@ -110,6 +111,7 @@ Platform berbasis investigasi dan incident response. Setiap lab mensimulasikan i
 | [Network Analysis - Ransomware](./BTLO/Network%20Analysis%20-%20Ransomware/) | Network Forensics / PCAP Analysis | Medium | ✅ |
 | [Hidden Launch](./BTLO/Hidden%20Launch/) | Digital Forensics / macOS Forensics | Medium | 🔄 |
 | [ThePackages](./BTLO/ThePackages/) | OSINT / Google Dorking | Easy | 🔄 |
+| [Source](./BTLO/Source/) | Manual Code Review / Vulnerability Research | Medium | ✅ |
 
 ### 🟣 [CyberDefenders](./CyberDefenders/)
 

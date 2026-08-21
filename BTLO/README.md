@@ -35,6 +35,7 @@ Platform investigasi dan incident response. Setiap lab mensimulasikan insiden ny
 | [Network Analysis - Ransomware](./Network%20Analysis%20-%20Ransomware/) | Network Forensics / PCAP Analysis | Medium | ✅ | 2026-08-21 |
 | [Hidden Launch](./Hidden%20Launch/) | Digital Forensics / macOS Forensics | Medium | 🔄 | - |
 | [ThePackages](./ThePackages/) | OSINT / Google Dorking | Easy | 🔄 | - |
+| [Source](./Source/) | Manual Code Review / Vulnerability Research | Medium | ✅ | 2026-08-21 |
 | [D3FEND](./D3FEND/) | Framework | Easy | ✅ | 2026-05-09 |
 | [Macro-ni](./Macro-ni/) | Malware Analysis | Medium | ✅ | - |
 | [Curiosity](./Curiosity/) | Threat Hunting | Medium | ✅ | - |
