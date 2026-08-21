@@ -50,7 +50,7 @@ Buka `Statistics > Capture File Properties` di Wireshark, cek bagian `Capture > 
 
 ### 2. Full URL download ransomware executable
 
-Filter `tcp.stream eq 4` buat isolasi stream yang transfer file lumayan besar (~495 KB). Ketemu response `HTTP/1.0 200 OK` dari `10.0.2.15:8000` ke `10.0.2.4`, dengan `Content-Type: application/x-msdos-program`. Detail `Full request URI` di packet detail langsung nunjukin sumber file-nya.
+Filter `ip.addr==10.0.2.4 && ip.addr==10.0.2.15` buat fokus ke traffic antara dua host ini, lalu follow TCP stream-nya (`tcp.stream eq 4`). Ketemu response `HTTP/1.0 200 OK` dari `10.0.2.15:8000` ke `10.0.2.4`, dengan `Content-Type: application/x-msdos-program`. Detail `Full request URI` di packet detail langsung nunjukin sumber file-nya.
 
 **Jawaban:** `http://10.0.2.15:8000/safecrypt.exe`
 
