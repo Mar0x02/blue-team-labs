@@ -10,7 +10,7 @@ Dokumentasi perjalanan belajar Blue Team & SOC Analyst — berisi writeup challe
 
 | Challenge | Platform | Category | Difficulty | Status | Date |
 |-----------|----------|----------|------------|--------|------|
-| [Network Analysis - Ransomware](./BTLO/Network%20Analysis%20-%20Ransomware/) | BTLO | Network Forensics / PCAP Analysis | Medium | 🔄 | - |
+| [Network Analysis - Ransomware](./BTLO/Network%20Analysis%20-%20Ransomware/) | BTLO | Network Forensics / PCAP Analysis | Medium | ✅ | 2026-08-21 |
 | [BlackEnergy Lab](./CyberDefenders/BlackEnergy%20Lab/) | CyberDefenders | Endpoint Forensics | Medium | ✅ | 2026-08-15 |
 | [OpenWire Lab](./CyberDefenders/OpenWire%20Lab/) | CyberDefenders | Network Forensics | Medium | ✅ | 2026-08-14 |
 | [3CX Supply Chain Lab](./CyberDefenders/3CX%20Supply%20Chain%20Lab/) | CyberDefenders | Threat Intelligence | Easy | ✅ | 2026-08-14 |
@@ -106,7 +106,7 @@ Platform berbasis investigasi dan incident response. Setiap lab mensimulasikan i
 | [Melissa](./BTLO/Melissa/) | Malware Analysis / Macro Virus | Easy | ✅ |
 | [Testa](./BTLO/Testa/) | OT Security / ICS Forensics | Medium | ✅ |
 | [Network Analysis - Web Shell](./BTLO/Network%20Analysis%20-%20Web%20Shell/) | Network Forensics / PCAP Analysis | Easy | ✅ |
-| [Network Analysis - Ransomware](./BTLO/Network%20Analysis%20-%20Ransomware/) | Network Forensics / PCAP Analysis | Medium | 🔄 |
+| [Network Analysis - Ransomware](./BTLO/Network%20Analysis%20-%20Ransomware/) | Network Forensics / PCAP Analysis | Medium | ✅ |
 | [ThePackages](./BTLO/ThePackages/) | OSINT / Google Dorking | Easy | 🔄 |
 
 ### 🟣 [CyberDefenders](./CyberDefenders/)

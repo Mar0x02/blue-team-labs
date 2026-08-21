@@ -32,7 +32,7 @@ Platform investigasi dan incident response. Setiap lab mensimulasikan insiden ny
 | [Reverse Engineering - Another Injection](./Reverse%20Engineering%20-%20Another%20Injection/) | Reverse Engineering / Malware Analysis | Hard | ✅ | 2026-05-24 |
 | [Melissa](./Melissa/) | Malware Analysis / Macro Virus | Easy | ✅ | 2026-05-24 |
 | [Testa](./Testa/) | OT Security / ICS Forensics | Medium | ✅ | 2026-05-28 |
-| [Network Analysis - Ransomware](./Network%20Analysis%20-%20Ransomware/) | Network Forensics / PCAP Analysis | Medium | 🔄 | - |
+| [Network Analysis - Ransomware](./Network%20Analysis%20-%20Ransomware/) | Network Forensics / PCAP Analysis | Medium | ✅ | 2026-08-21 |
 | [ThePackages](./ThePackages/) | OSINT / Google Dorking | Easy | 🔄 | - |
 | [D3FEND](./D3FEND/) | Framework | Easy | ✅ | 2026-05-09 |
 | [Macro-ni](./Macro-ni/) | Malware Analysis | Medium | ✅ | - |
